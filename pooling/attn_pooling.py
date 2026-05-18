@@ -18,7 +18,7 @@ def graph_attn_op_batched(q, k, v, batch, batch_size):
     padded_values.shape
     return torch.matmul(padded_attn_maps, padded_values)
 
-class GraphSelfAttention:
+class GraphSelfAttention(torch.nn.Module):
     def __init__(self, input_dim, inner_dim):
         super().__init__()
         self.input_dim = input_dim
@@ -35,7 +35,7 @@ class GraphSelfAttention:
         out = graph_attn_op_batched(q, k, v, batch, batch.max() + 1)
         return self.out_proj(out)
 
-class GraphMultiHeadSelfAttention:
+class GraphMultiHeadSelfAttention(torch.nn.Module):
     def __init__(self, input_dim, inner_dim, num_heads):
         super().__init__()
         self.input_dim = input_dim
