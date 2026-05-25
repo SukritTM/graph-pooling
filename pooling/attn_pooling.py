@@ -1,22 +1,28 @@
 import torch
 from torch.nn import Linear
 
+from torch_geometric.utils import to_dense_batch
+import torch.nn.functional as F
+import math
+# torch.autograd.set_detect_anomaly(True, check_nan=False)
+
 def graph_attn_op_batched(q, k, v, batch, batch_size):
-    '''
-    Returns a padded tensor of shape (batch_size, max_node_number, embedding_dim)
-    '''
-    attn_maps = []
-    values = []
-    for i in range(batch_size):
-        attn_map = q[batch == i].matmul(k[batch == i].T)/q.shape[0]
-        attn_maps.append(attn_map)
-        values.append(v[batch == i])
+    q, mask = to_dense_batch(q, batch)
+    k, _    = to_dense_batch(k, batch)
+    v, _    = to_dense_batch(v, batch)
 
-    padded_attn_maps = torch.nested.as_nested_tensor(attn_maps).to_padded_tensor(0.)
-    padded_values = torch.nested.as_nested_tensor(values).to_padded_tensor(0.)
 
-    padded_values.shape
-    return torch.matmul(padded_attn_maps, padded_values)
+    attn_maps = torch.bmm(q, k.transpose(-1, -2)) / math.sqrt(k.shape[-1]) # (batch, padded_num_nodes, padded_num_nodes)
+    attn_mask = mask.unsqueeze(1) & mask.unsqueeze(2)
+    attn_maps = attn_maps.masked_fill(~(attn_mask), -torch.inf)
+    attn_maps = F.softmax(attn_maps, dim=-1)
+    attn_maps = attn_maps.masked_fill(torch.isnan(attn_maps), 0)
+
+    # print(attn_maps[0])
+
+    # print(attn_maps[0])
+
+    return torch.bmm(attn_maps, v)
 
 class GraphSelfAttention(torch.nn.Module):
     def __init__(self, input_dim, inner_dim):
