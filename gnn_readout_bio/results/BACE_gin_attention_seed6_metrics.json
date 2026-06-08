@@ -1,0 +1,18 @@
+{
+  "train_auc": 0.9293986801497144,
+  "val_auc": 0.8239247311827957,
+  "test_auc": 0.8713541666666667,
+  "best_epoch": 71,
+  "run_name": "BACE_gin_attention_seed6",
+  "dataset": "BACE",
+  "model": "gin",
+  "readout": "attention",
+  "seed": 6,
+  "split": "scaffold",
+  "checkpoint": "results/BACE_gin_attention_seed6_best.pt",
+  "hidden_dim": 128,
+  "num_layers": 3,
+  "dropout": 0.3,
+  "lr": 0.001,
+  "batch_size": 32
+}

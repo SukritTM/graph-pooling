@@ -1,0 +1,25 @@
+Task 146: BBBP / graphsage / max / seed 5
+[run_single] device=cuda  model=graphsage  readout=max  seed=5
+Dataset: BBBP  |  2039 molecules  |  1 task(s)
+Loaded existing scaffold split from ./data/splits/BBBP_scaffold_seed5.json
+Split  train=1631  val=203  test=205
+Model: graphsage  |  readout=max  |  params=76,545
+
+Training BBBP_graphsage_max_seed5 for up to 100 epochs ...
+  Epoch    1 | loss 0.5780 | val_auc 0.2806 *
+  Epoch    2 | loss 0.5634 | val_auc 0.3644 *
+  Epoch    3 | loss 0.5604 | val_auc 0.5390 *
+  Epoch   10 | loss 0.5142 | val_auc 0.8020
+  Epoch   20 | loss 0.4830 | val_auc 0.9038 *
+  Epoch   30 | loss 0.4596 | val_auc 0.9427 *
+  Epoch   40 | loss 0.4361 | val_auc 0.9411
+  Epoch   50 | loss 0.3944 | val_auc 0.9505
+  Epoch   60 | loss 0.3852 | val_auc 0.9364
+  Epoch   70 | loss 0.3614 | val_auc 0.9254
+  Early stopping at epoch 71  (best val_auc=0.9517 at epoch 51)
+
+============================================================
+  BBBP_graphsage_max_seed5
+  train_auc=0.8619  val_auc=0.9517  test_auc=0.9269  (best epoch 51)
+  Saved → results/BBBP_graphsage_max_seed5_metrics.json
+============================================================

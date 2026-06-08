@@ -1,0 +1,26 @@
+Task 86: BBBP / gat / mean / seed 5
+[run_single] device=cuda  model=gat  readout=mean  seed=5
+Dataset: BBBP  |  2039 molecules  |  1 task(s)
+Loaded existing scaffold split from ./data/splits/BBBP_scaffold_seed5.json
+Split  train=1631  val=203  test=205
+Model: gat  |  readout=mean  |  params=43,393
+
+Training BBBP_gat_mean_seed5 for up to 100 epochs ...
+  Epoch    1 | loss 0.5672 | val_auc 0.5269 *
+  Epoch    2 | loss 0.5506 | val_auc 0.7002 *
+  Epoch    3 | loss 0.5525 | val_auc 0.7728 *
+  Epoch   10 | loss 0.5221 | val_auc 0.8929
+  Epoch   20 | loss 0.5006 | val_auc 0.9182 *
+  Epoch   30 | loss 0.4587 | val_auc 0.9285
+  Epoch   40 | loss 0.4516 | val_auc 0.9382
+  Epoch   50 | loss 0.4583 | val_auc 0.9418 *
+  Epoch   60 | loss 0.4257 | val_auc 0.9408
+  Epoch   70 | loss 0.4160 | val_auc 0.9396
+  Epoch   80 | loss 0.4072 | val_auc 0.9374
+  Early stopping at epoch 86  (best val_auc=0.9429 at epoch 66)
+
+============================================================
+  BBBP_gat_mean_seed5
+  train_auc=0.8474  val_auc=0.9429  test_auc=0.8917  (best epoch 66)
+  Saved → results/BBBP_gat_mean_seed5_metrics.json
+============================================================

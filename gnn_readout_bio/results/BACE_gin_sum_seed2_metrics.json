@@ -1,0 +1,18 @@
+{
+  "train_auc": 0.9549119552607963,
+  "val_auc": 0.8440860215053764,
+  "test_auc": 0.8390625,
+  "best_epoch": 92,
+  "run_name": "BACE_gin_sum_seed2",
+  "dataset": "BACE",
+  "model": "gin",
+  "readout": "sum",
+  "seed": 2,
+  "split": "scaffold",
+  "checkpoint": "results/BACE_gin_sum_seed2_best.pt",
+  "hidden_dim": 128,
+  "num_layers": 3,
+  "dropout": 0.3,
+  "lr": 0.001,
+  "batch_size": 32
+}

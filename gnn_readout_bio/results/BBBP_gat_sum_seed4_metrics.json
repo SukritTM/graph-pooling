@@ -1,0 +1,18 @@
+{
+  "train_auc": 0.8454979664591283,
+  "val_auc": 0.9504909983633387,
+  "test_auc": 0.8965201465201464,
+  "best_epoch": 96,
+  "run_name": "BBBP_gat_sum_seed4",
+  "dataset": "BBBP",
+  "model": "gat",
+  "readout": "sum",
+  "seed": 4,
+  "split": "scaffold",
+  "checkpoint": "results/BBBP_gat_sum_seed4_best.pt",
+  "hidden_dim": 128,
+  "num_layers": 3,
+  "dropout": 0.3,
+  "lr": 0.001,
+  "batch_size": 64
+}

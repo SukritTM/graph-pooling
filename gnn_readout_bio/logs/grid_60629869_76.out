@@ -1,0 +1,20 @@
+Task 76: BBBP / gin / attention / seed 5
+[run_single] device=cuda  model=gin  readout=attention  seed=5
+Dataset: BBBP  |  2039 molecules  |  1 task(s)
+Loaded existing scaffold split from ./data/splits/BBBP_scaffold_seed5.json
+Split  train=1631  val=203  test=205
+Model: gin  |  readout=attention  |  params=109,573
+
+Training BBBP_gin_attention_seed5 for up to 100 epochs ...
+  Epoch    1 | loss 0.5380 | val_auc 0.9032 *
+  Epoch    2 | loss 0.4784 | val_auc 0.8929
+  Epoch    3 | loss 0.4506 | val_auc 0.8582
+  Epoch   10 | loss 0.3658 | val_auc 0.9366
+  Epoch   20 | loss 0.3182 | val_auc 0.9389
+  Early stopping at epoch 27  (best val_auc=0.9538 at epoch 7)
+
+============================================================
+  BBBP_gin_attention_seed5
+  train_auc=0.8597  val_auc=0.9538  test_auc=0.9199  (best epoch 7)
+  Saved → results/BBBP_gin_attention_seed5_metrics.json
+============================================================

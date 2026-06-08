@@ -1,0 +1,18 @@
+{
+  "train_auc": 0.9576589073478231,
+  "val_auc": 0.8338709677419355,
+  "test_auc": 0.8989583333333333,
+  "best_epoch": 96,
+  "run_name": "BACE_gin_mean_seed6",
+  "dataset": "BACE",
+  "model": "gin",
+  "readout": "mean",
+  "seed": 6,
+  "split": "scaffold",
+  "checkpoint": "results/BACE_gin_mean_seed6_best.pt",
+  "hidden_dim": 128,
+  "num_layers": 3,
+  "dropout": 0.3,
+  "lr": 0.001,
+  "batch_size": 32
+}

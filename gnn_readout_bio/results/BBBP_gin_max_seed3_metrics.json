@@ -1,0 +1,18 @@
+{
+  "train_auc": 0.8967099317131952,
+  "val_auc": 0.974631751227496,
+  "test_auc": 0.9382522239665096,
+  "best_epoch": 27,
+  "run_name": "BBBP_gin_max_seed3",
+  "dataset": "BBBP",
+  "model": "gin",
+  "readout": "max",
+  "seed": 3,
+  "split": "scaffold",
+  "checkpoint": "results/BBBP_gin_max_seed3_best.pt",
+  "hidden_dim": 128,
+  "num_layers": 3,
+  "dropout": 0.3,
+  "lr": 0.001,
+  "batch_size": 64
+}

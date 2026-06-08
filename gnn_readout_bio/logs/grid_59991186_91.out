@@ -1,0 +1,27 @@
+Task 91: BACE / graphsage / mean / seed 9
+[run_single] device=cuda  model=graphsage  readout=mean  seed=9
+Dataset: BACE  |  1513 molecules  |  1 task(s)
+Loaded existing scaffold split from ./data/splits/BACE_scaffold_seed9.json
+Split  train=1210  val=151  test=152
+Model: graphsage  |  readout=mean  |  params=76,545
+
+Training BACE_graphsage_mean_seed9 for up to 100 epochs ...
+  Epoch    1 | loss 0.6944 | val_auc 0.5112 *
+  Epoch    2 | loss 0.6959 | val_auc 0.5169 *
+  Epoch    3 | loss 0.6924 | val_auc 0.5637 *
+  Epoch   10 | loss 0.6763 | val_auc 0.5562
+  Epoch   20 | loss 0.6577 | val_auc 0.5659
+  Epoch   30 | loss 0.6432 | val_auc 0.7126 *
+  Epoch   40 | loss 0.6032 | val_auc 0.7696
+  Epoch   50 | loss 0.5725 | val_auc 0.7710
+  Epoch   60 | loss 0.5443 | val_auc 0.8242
+  Epoch   70 | loss 0.5369 | val_auc 0.8336
+  Epoch   80 | loss 0.5057 | val_auc 0.8384
+  Epoch   90 | loss 0.5116 | val_auc 0.8371
+  Epoch  100 | loss 0.4754 | val_auc 0.8522
+
+============================================================
+  BACE_graphsage_mean_seed9
+  train_auc=0.8632  val_auc=0.8696  test_auc=0.7154  (best epoch 94)
+  Saved → results/BACE_graphsage_mean_seed9_metrics.json
+============================================================

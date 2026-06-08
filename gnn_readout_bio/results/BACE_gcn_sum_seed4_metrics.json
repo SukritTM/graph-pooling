@@ -1,0 +1,18 @@
+{
+  "train_auc": 0.7043784336901089,
+  "val_auc": 0.6258064516129032,
+  "test_auc": 0.6278645833333334,
+  "best_epoch": 11,
+  "run_name": "BACE_gcn_sum_seed4",
+  "dataset": "BACE",
+  "model": "gcn",
+  "readout": "sum",
+  "seed": 4,
+  "split": "scaffold",
+  "checkpoint": "results/BACE_gcn_sum_seed4_best.pt",
+  "hidden_dim": 128,
+  "num_layers": 3,
+  "dropout": 0.3,
+  "lr": 0.001,
+  "batch_size": 32
+}

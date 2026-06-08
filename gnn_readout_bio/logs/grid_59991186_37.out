@@ -1,0 +1,27 @@
+Task 37: BACE / gin / sum / seed 4
+[run_single] device=cuda  model=gin  readout=sum  seed=4
+Dataset: BACE  |  1513 molecules  |  1 task(s)
+Loaded existing scaffold split from ./data/splits/BACE_scaffold_seed4.json
+Split  train=1210  val=151  test=152
+Model: gin  |  readout=sum  |  params=92,932
+
+Training BACE_gin_sum_seed4 for up to 100 epochs ...
+  Epoch    1 | loss 0.7504 | val_auc 0.5645 *
+  Epoch    2 | loss 0.6710 | val_auc 0.5844 *
+  Epoch    3 | loss 0.6328 | val_auc 0.6202 *
+  Epoch   10 | loss 0.5543 | val_auc 0.6414
+  Epoch   20 | loss 0.4786 | val_auc 0.6438
+  Epoch   30 | loss 0.4354 | val_auc 0.7788 *
+  Epoch   40 | loss 0.4236 | val_auc 0.7605
+  Epoch   50 | loss 0.3986 | val_auc 0.8202 *
+  Epoch   60 | loss 0.3941 | val_auc 0.7970
+  Epoch   70 | loss 0.3686 | val_auc 0.7892
+  Epoch   80 | loss 0.3528 | val_auc 0.7734
+  Epoch   90 | loss 0.3260 | val_auc 0.7766
+  Epoch  100 | loss 0.3200 | val_auc 0.8051
+
+============================================================
+  BACE_gin_sum_seed4
+  train_auc=0.8875  val_auc=0.8645  test_auc=0.7706  (best epoch 92)
+  Saved → results/BACE_gin_sum_seed4_metrics.json
+============================================================

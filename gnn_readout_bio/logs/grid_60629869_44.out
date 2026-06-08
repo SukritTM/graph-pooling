@@ -1,0 +1,21 @@
+Task 44: BBBP / gin / mean / seed 3
+[run_single] device=cuda  model=gin  readout=mean  seed=3
+Dataset: BBBP  |  2039 molecules  |  1 task(s)
+Loaded existing scaffold split from ./data/splits/BBBP_scaffold_seed3.json
+Split  train=1631  val=203  test=205
+Model: gin  |  readout=mean  |  params=92,932
+
+Training BBBP_gin_mean_seed3 for up to 100 epochs ...
+  Epoch    1 | loss 0.5482 | val_auc 0.8712 *
+  Epoch    2 | loss 0.4834 | val_auc 0.9176 *
+  Epoch    3 | loss 0.4688 | val_auc 0.8714
+  Epoch   10 | loss 0.3618 | val_auc 0.9502
+  Epoch   20 | loss 0.3216 | val_auc 0.8815
+  Epoch   30 | loss 0.2818 | val_auc 0.9435
+  Early stopping at epoch 33  (best val_auc=0.9673 at epoch 13)
+
+============================================================
+  BBBP_gin_mean_seed3
+  train_auc=0.8983  val_auc=0.9673  test_auc=0.8944  (best epoch 13)
+  Saved → results/BBBP_gin_mean_seed3_metrics.json
+============================================================

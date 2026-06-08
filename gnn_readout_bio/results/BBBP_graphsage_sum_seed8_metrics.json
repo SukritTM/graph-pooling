@@ -1,0 +1,18 @@
+{
+  "train_auc": 0.8061211253933187,
+  "val_auc": 0.9656301145662848,
+  "test_auc": 0.9496336996336996,
+  "best_epoch": 37,
+  "run_name": "BBBP_graphsage_sum_seed8",
+  "dataset": "BBBP",
+  "model": "graphsage",
+  "readout": "sum",
+  "seed": 8,
+  "split": "scaffold",
+  "checkpoint": "results/BBBP_graphsage_sum_seed8_best.pt",
+  "hidden_dim": 128,
+  "num_layers": 3,
+  "dropout": 0.3,
+  "lr": 0.001,
+  "batch_size": 64
+}

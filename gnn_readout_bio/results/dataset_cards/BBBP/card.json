@@ -1,0 +1,352 @@
+{
+  "dataset": "BBBP",
+  "n_molecules": 2039,
+  "n_tasks": 1,
+  "task_type": "binary",
+  "n_positive": 1560,
+  "n_negative": 479,
+  "positive_ratio": 0.7651,
+  "n_unique_scaffolds": 1025,
+  "scaffold_size_stats": {
+    "mean": 1.9893,
+    "std": 6.097,
+    "min": 1.0,
+    "max": 137.0
+  },
+  "graph_stats": {
+    "num_nodes": {
+      "mean": 24.0647,
+      "std": 10.5885,
+      "min": 2.0,
+      "max": 132.0
+    },
+    "num_edges": {
+      "mean": 25.9544,
+      "std": 11.7128,
+      "min": 1.0,
+      "max": 145.0
+    },
+    "avg_degree": {
+      "mean": 2.134,
+      "std": 0.1381,
+      "min": 1.0,
+      "max": 2.4
+    },
+    "max_degree": {
+      "mean": 3.4247,
+      "std": 0.5128,
+      "min": 1.0,
+      "max": 4.0
+    },
+    "density": {
+      "mean": 0.1137,
+      "std": 0.0695,
+      "min": 0.0168,
+      "max": 1.0
+    }
+  },
+  "descriptor_stats": {
+    "MolWt": {
+      "overall": {
+        "mean": 344.5363,
+        "std": 150.6172,
+        "min": 28.054,
+        "max": 1879.68
+      },
+      "by_label": {
+        "1": {
+          "mean": 315.8953,
+          "std": 112.0907,
+          "min": 28.054,
+          "max": 1136.115
+        },
+        "0": {
+          "mean": 437.814,
+          "std": 210.4181,
+          "min": 109.128,
+          "max": 1879.68
+        }
+      }
+    },
+    "HeavyAtomCount": {
+      "overall": {
+        "mean": 24.0451,
+        "std": 10.5843,
+        "min": 2.0,
+        "max": 132.0
+      },
+      "by_label": {
+        "1": {
+          "mean": 22.1359,
+          "std": 7.9081,
+          "min": 2.0,
+          "max": 76.0
+        },
+        "0": {
+          "mean": 30.263,
+          "std": 14.9223,
+          "min": 8.0,
+          "max": 132.0
+        }
+      }
+    },
+    "NumHDonors": {
+      "overall": {
+        "mean": 1.5463,
+        "std": 1.8403,
+        "min": 0.0,
+        "max": 24.0
+      },
+      "by_label": {
+        "1": {
+          "mean": 1.0519,
+          "std": 1.0636,
+          "min": 0.0,
+          "max": 13.0
+        },
+        "0": {
+          "mean": 3.1566,
+          "std": 2.7098,
+          "min": 0.0,
+          "max": 24.0
+        }
+      }
+    },
+    "NumHAcceptors": {
+      "overall": {
+        "mean": 4.4429,
+        "std": 3.1989,
+        "min": 0.0,
+        "max": 33.0
+      },
+      "by_label": {
+        "1": {
+          "mean": 3.6026,
+          "std": 2.0804,
+          "min": 0.0,
+          "max": 24.0
+        },
+        "0": {
+          "mean": 7.1795,
+          "std": 4.4357,
+          "min": 1.0,
+          "max": 33.0
+        }
+      }
+    },
+    "NumRotatableBonds": {
+      "overall": {
+        "mean": 4.1986,
+        "std": 3.0431,
+        "min": 0.0,
+        "max": 35.0
+      },
+      "by_label": {
+        "1": {
+          "mean": 3.8147,
+          "std": 2.7547,
+          "min": 0.0,
+          "max": 27.0
+        },
+        "0": {
+          "mean": 5.4489,
+          "std": 3.5588,
+          "min": 0.0,
+          "max": 35.0
+        }
+      }
+    },
+    "RingCount": {
+      "overall": {
+        "mean": 2.9912,
+        "std": 1.5492,
+        "min": 0.0,
+        "max": 16.0
+      },
+      "by_label": {
+        "1": {
+          "mean": 2.8929,
+          "std": 1.4831,
+          "min": 0.0,
+          "max": 10.0
+        },
+        "0": {
+          "mean": 3.3111,
+          "std": 1.7088,
+          "min": 0.0,
+          "max": 16.0
+        }
+      }
+    },
+    "TPSA": {
+      "overall": {
+        "mean": 70.7285,
+        "std": 58.4542,
+        "min": 0.0,
+        "max": 662.41
+      },
+      "by_label": {
+        "1": {
+          "mean": 53.6165,
+          "std": 36.8559,
+          "min": 0.0,
+          "max": 358.2
+        },
+        "0": {
+          "mean": 126.4586,
+          "std": 77.8564,
+          "min": 6.48,
+          "max": 662.41
+        }
+      }
+    },
+    "MolLogP": {
+      "overall": {
+        "mean": 2.3181,
+        "std": 2.0923,
+        "min": -11.7446,
+        "max": 10.8127
+      },
+      "by_label": {
+        "1": {
+          "mean": 2.6718,
+          "std": 1.7365,
+          "min": -11.7446,
+          "max": 10.0563
+        },
+        "0": {
+          "mean": 1.1658,
+          "std": 2.6607,
+          "min": -8.3677,
+          "max": 10.8127
+        }
+      }
+    },
+    "FractionCSP3": {
+      "overall": {
+        "mean": 0.4615,
+        "std": 0.2306,
+        "min": 0.0,
+        "max": 1.0
+      },
+      "by_label": {
+        "1": {
+          "mean": 0.4591,
+          "std": 0.2286,
+          "min": 0.0,
+          "max": 1.0
+        },
+        "0": {
+          "mean": 0.4695,
+          "std": 0.2369,
+          "min": 0.0,
+          "max": 1.0
+        }
+      }
+    },
+    "NumAromaticRings": {
+      "overall": {
+        "mean": 1.4129,
+        "std": 0.9969,
+        "min": 0.0,
+        "max": 7.0
+      },
+      "by_label": {
+        "1": {
+          "mean": 1.4083,
+          "std": 0.9591,
+          "min": 0.0,
+          "max": 4.0
+        },
+        "0": {
+          "mean": 1.428,
+          "std": 1.111,
+          "min": 0.0,
+          "max": 7.0
+        }
+      }
+    }
+  },
+  "split_stats": {
+    "0": {
+      "train_size": 1631,
+      "val_size": 203,
+      "test_size": 205,
+      "train_pos_ratio": 0.7652,
+      "val_pos_ratio": 0.7685,
+      "test_pos_ratio": 0.761
+    },
+    "1": {
+      "train_size": 1631,
+      "val_size": 203,
+      "test_size": 205,
+      "train_pos_ratio": 0.7652,
+      "val_pos_ratio": 0.7685,
+      "test_pos_ratio": 0.761
+    },
+    "2": {
+      "train_size": 1631,
+      "val_size": 203,
+      "test_size": 205,
+      "train_pos_ratio": 0.7652,
+      "val_pos_ratio": 0.7685,
+      "test_pos_ratio": 0.761
+    },
+    "3": {
+      "train_size": 1631,
+      "val_size": 203,
+      "test_size": 205,
+      "train_pos_ratio": 0.7652,
+      "val_pos_ratio": 0.7685,
+      "test_pos_ratio": 0.761
+    },
+    "4": {
+      "train_size": 1631,
+      "val_size": 203,
+      "test_size": 205,
+      "train_pos_ratio": 0.7652,
+      "val_pos_ratio": 0.7685,
+      "test_pos_ratio": 0.761
+    },
+    "5": {
+      "train_size": 1631,
+      "val_size": 203,
+      "test_size": 205,
+      "train_pos_ratio": 0.7652,
+      "val_pos_ratio": 0.7685,
+      "test_pos_ratio": 0.761
+    },
+    "6": {
+      "train_size": 1631,
+      "val_size": 203,
+      "test_size": 205,
+      "train_pos_ratio": 0.7652,
+      "val_pos_ratio": 0.7685,
+      "test_pos_ratio": 0.761
+    },
+    "7": {
+      "train_size": 1631,
+      "val_size": 203,
+      "test_size": 205,
+      "train_pos_ratio": 0.7652,
+      "val_pos_ratio": 0.7685,
+      "test_pos_ratio": 0.761
+    },
+    "8": {
+      "train_size": 1631,
+      "val_size": 203,
+      "test_size": 205,
+      "train_pos_ratio": 0.7652,
+      "val_pos_ratio": 0.7685,
+      "test_pos_ratio": 0.761
+    },
+    "9": {
+      "train_size": 1631,
+      "val_size": 203,
+      "test_size": 205,
+      "train_pos_ratio": 0.7652,
+      "val_pos_ratio": 0.7685,
+      "test_pos_ratio": 0.761
+    }
+  }
+}

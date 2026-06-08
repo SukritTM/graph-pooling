@@ -1,0 +1,18 @@
+{
+  "train_auc": 0.8168611968393634,
+  "val_auc": 0.7077956989247313,
+  "test_auc": 0.68828125,
+  "best_epoch": 65,
+  "run_name": "BACE_gat_max_seed6",
+  "dataset": "BACE",
+  "model": "gat",
+  "readout": "max",
+  "seed": 6,
+  "split": "scaffold",
+  "checkpoint": "results/BACE_gat_max_seed6_best.pt",
+  "hidden_dim": 128,
+  "num_layers": 3,
+  "dropout": 0.3,
+  "lr": 0.001,
+  "batch_size": 32
+}

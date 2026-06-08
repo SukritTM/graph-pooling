@@ -1,0 +1,22 @@
+Task 28: BACE / gat / sum / seed 0
+[run_single] device=cuda  model=gat  readout=sum  seed=0
+Dataset: BACE  |  1513 molecules  |  1 task(s)
+Loaded existing scaffold split from ./data/splits/BACE_scaffold_seed0.json
+Split  train=1210  val=151  test=152
+Model: gat  |  readout=sum  |  params=43,393
+
+Training BACE_gat_sum_seed0 for up to 100 epochs ...
+  Epoch    1 | loss 1.3791 | val_auc 0.6199 *
+  Epoch    2 | loss 0.7035 | val_auc 0.6648 *
+  Epoch    3 | loss 0.6905 | val_auc 0.6629
+  Epoch   10 | loss 0.6828 | val_auc 0.6616
+  Epoch   20 | loss 0.6987 | val_auc 0.6540
+  Epoch   30 | loss 0.6910 | val_auc 0.6527
+  Epoch   40 | loss 0.6792 | val_auc 0.6492
+  Early stopping at epoch 41  (best val_auc=0.6772 at epoch 21)
+
+============================================================
+  BACE_gat_sum_seed0
+  train_auc=0.7003  val_auc=0.6772  test_auc=0.6107  (best epoch 21)
+  Saved → results/BACE_gat_sum_seed0_metrics.json
+============================================================

@@ -1,0 +1,27 @@
+Task 23: BBBP / gcn / max / seed 2
+[run_single] device=cuda  model=gcn  readout=max  seed=2
+Dataset: BBBP  |  2039 molecules  |  1 task(s)
+Loaded existing scaffold split from ./data/splits/BBBP_scaffold_seed2.json
+Split  train=1631  val=203  test=205
+Model: gcn  |  readout=max  |  params=42,625
+
+Training BBBP_gcn_max_seed2 for up to 100 epochs ...
+  Epoch    1 | loss 0.5887 | val_auc 0.2911 *
+  Epoch    2 | loss 0.5626 | val_auc 0.3579 *
+  Epoch    3 | loss 0.5581 | val_auc 0.4173 *
+  Epoch   10 | loss 0.5239 | val_auc 0.7956 *
+  Epoch   20 | loss 0.4863 | val_auc 0.8455
+  Epoch   30 | loss 0.4724 | val_auc 0.8906
+  Epoch   40 | loss 0.4672 | val_auc 0.9190 *
+  Epoch   50 | loss 0.4595 | val_auc 0.9259
+  Epoch   60 | loss 0.4551 | val_auc 0.9540 *
+  Epoch   70 | loss 0.4184 | val_auc 0.9523
+  Epoch   80 | loss 0.4049 | val_auc 0.9527
+  Epoch   90 | loss 0.3819 | val_auc 0.9648 *
+  Epoch  100 | loss 0.3822 | val_auc 0.9524
+
+============================================================
+  BBBP_gcn_max_seed2
+  train_auc=0.8776  val_auc=0.9666  test_auc=0.8883  (best epoch 94)
+  Saved → results/BBBP_gcn_max_seed2_metrics.json
+============================================================

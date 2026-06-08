@@ -1,0 +1,18 @@
+{
+  "train_auc": 0.8023270653410993,
+  "val_auc": 0.9682214948172395,
+  "test_auc": 0.9525117739403454,
+  "best_epoch": 47,
+  "run_name": "BBBP_gcn_sum_seed2",
+  "dataset": "BBBP",
+  "model": "gcn",
+  "readout": "sum",
+  "seed": 2,
+  "split": "scaffold",
+  "checkpoint": "results/BBBP_gcn_sum_seed2_best.pt",
+  "hidden_dim": 128,
+  "num_layers": 3,
+  "dropout": 0.3,
+  "lr": 0.001,
+  "batch_size": 64
+}

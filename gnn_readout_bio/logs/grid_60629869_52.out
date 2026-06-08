@@ -1,0 +1,21 @@
+Task 52: BBBP / gin / sum / seed 1
+[run_single] device=cuda  model=gin  readout=sum  seed=1
+Dataset: BBBP  |  2039 molecules  |  1 task(s)
+Loaded existing scaffold split from ./data/splits/BBBP_scaffold_seed1.json
+Split  train=1631  val=203  test=205
+Model: gin  |  readout=sum  |  params=92,932
+
+Training BBBP_gin_sum_seed1 for up to 100 epochs ...
+  Epoch    1 | loss 0.6229 | val_auc 0.8309 *
+  Epoch    2 | loss 0.5063 | val_auc 0.8089
+  Epoch    3 | loss 0.4778 | val_auc 0.9197 *
+  Epoch   10 | loss 0.3783 | val_auc 0.9083
+  Epoch   20 | loss 0.3330 | val_auc 0.8857
+  Epoch   30 | loss 0.3088 | val_auc 0.9073
+  Early stopping at epoch 32  (best val_auc=0.9318 at epoch 12)
+
+============================================================
+  BBBP_gin_sum_seed1
+  train_auc=0.9139  val_auc=0.9318  test_auc=0.9627  (best epoch 12)
+  Saved → results/BBBP_gin_sum_seed1_metrics.json
+============================================================

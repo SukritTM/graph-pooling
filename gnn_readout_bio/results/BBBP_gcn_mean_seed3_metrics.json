@@ -1,0 +1,18 @@
+{
+  "train_auc": 0.8070353819374707,
+  "val_auc": 0.9817239498090562,
+  "test_auc": 0.8676739926739927,
+  "best_epoch": 51,
+  "run_name": "BBBP_gcn_mean_seed3",
+  "dataset": "BBBP",
+  "model": "gcn",
+  "readout": "mean",
+  "seed": 3,
+  "split": "scaffold",
+  "checkpoint": "results/BBBP_gcn_mean_seed3_best.pt",
+  "hidden_dim": 128,
+  "num_layers": 3,
+  "dropout": 0.3,
+  "lr": 0.001,
+  "batch_size": 64
+}

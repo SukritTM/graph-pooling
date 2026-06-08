@@ -1,0 +1,18 @@
+{
+  "train_auc": 0.6566569811981526,
+  "val_auc": 0.6276881720430108,
+  "test_auc": 0.6479166666666667,
+  "best_epoch": 29,
+  "run_name": "BACE_gcn_attention_seed5",
+  "dataset": "BACE",
+  "model": "gcn",
+  "readout": "attention",
+  "seed": 5,
+  "split": "scaffold",
+  "checkpoint": "results/BACE_gcn_attention_seed5_best.pt",
+  "hidden_dim": 128,
+  "num_layers": 3,
+  "dropout": 0.3,
+  "lr": 0.001,
+  "batch_size": 32
+}

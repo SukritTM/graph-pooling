@@ -1,0 +1,21 @@
+Task 111: BBBP / gat / attention / seed 0
+[run_single] device=cuda  model=gat  readout=attention  seed=0
+Dataset: BBBP  |  2039 molecules  |  1 task(s)
+Loaded existing scaffold split from ./data/splits/BBBP_scaffold_seed0.json
+Split  train=1631  val=203  test=205
+Model: gat  |  readout=attention  |  params=60,034
+
+Training BBBP_gat_attention_seed0 for up to 100 epochs ...
+  Epoch    1 | loss 0.5633 | val_auc 0.3672 *
+  Epoch    2 | loss 0.5554 | val_auc 0.8635 *
+  Epoch    3 | loss 0.5512 | val_auc 0.9187 *
+  Epoch   10 | loss 0.5029 | val_auc 0.9411
+  Epoch   20 | loss 0.4896 | val_auc 0.9456
+  Epoch   30 | loss 0.4694 | val_auc 0.9374
+  Early stopping at epoch 37  (best val_auc=0.9521 at epoch 17)
+
+============================================================
+  BBBP_gat_attention_seed0
+  train_auc=0.7418  val_auc=0.9521  test_auc=0.8544  (best epoch 17)
+  Saved → results/BBBP_gat_attention_seed0_metrics.json
+============================================================

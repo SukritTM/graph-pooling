@@ -1,0 +1,18 @@
+{
+  "train_auc": 0.8631571891347647,
+  "val_auc": 0.8696236559139784,
+  "test_auc": 0.7153645833333333,
+  "best_epoch": 94,
+  "run_name": "BACE_graphsage_mean_seed9",
+  "dataset": "BACE",
+  "model": "graphsage",
+  "readout": "mean",
+  "seed": 9,
+  "split": "scaffold",
+  "checkpoint": "results/BACE_graphsage_mean_seed9_best.pt",
+  "hidden_dim": 128,
+  "num_layers": 3,
+  "dropout": 0.3,
+  "lr": 0.001,
+  "batch_size": 32
+}

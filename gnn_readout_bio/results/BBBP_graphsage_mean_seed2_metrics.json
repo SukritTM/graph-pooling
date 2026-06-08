@@ -1,0 +1,18 @@
+{
+  "train_auc": 0.922850974091183,
+  "val_auc": 0.9652209492635024,
+  "test_auc": 0.902668759811617,
+  "best_epoch": 91,
+  "run_name": "BBBP_graphsage_mean_seed2",
+  "dataset": "BBBP",
+  "model": "graphsage",
+  "readout": "mean",
+  "seed": 2,
+  "split": "scaffold",
+  "checkpoint": "results/BBBP_graphsage_mean_seed2_best.pt",
+  "hidden_dim": 128,
+  "num_layers": 3,
+  "dropout": 0.3,
+  "lr": 0.001,
+  "batch_size": 64
+}

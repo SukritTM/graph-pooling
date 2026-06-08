@@ -1,0 +1,18 @@
+{
+  "train_auc": 0.7907555483028721,
+  "val_auc": 0.9316693944353519,
+  "test_auc": 0.8749345892203035,
+  "best_epoch": 31,
+  "run_name": "BBBP_gat_attention_seed5",
+  "dataset": "BBBP",
+  "model": "gat",
+  "readout": "attention",
+  "seed": 5,
+  "split": "scaffold",
+  "checkpoint": "results/BBBP_gat_attention_seed5_best.pt",
+  "hidden_dim": 128,
+  "num_layers": 3,
+  "dropout": 0.3,
+  "lr": 0.001,
+  "batch_size": 64
+}

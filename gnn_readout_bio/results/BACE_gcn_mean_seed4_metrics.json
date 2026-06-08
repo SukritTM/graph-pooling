@@ -1,0 +1,18 @@
+{
+  "train_auc": 0.7751699061002035,
+  "val_auc": 0.6806451612903226,
+  "test_auc": 0.6934895833333333,
+  "best_epoch": 89,
+  "run_name": "BACE_gcn_mean_seed4",
+  "dataset": "BACE",
+  "model": "gcn",
+  "readout": "mean",
+  "seed": 4,
+  "split": "scaffold",
+  "checkpoint": "results/BACE_gcn_mean_seed4_best.pt",
+  "hidden_dim": 128,
+  "num_layers": 3,
+  "dropout": 0.3,
+  "lr": 0.001,
+  "batch_size": 32
+}

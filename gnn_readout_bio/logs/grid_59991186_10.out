@@ -1,0 +1,21 @@
+Task 10: BACE / gcn / sum / seed 5
+[run_single] device=cuda  model=gcn  readout=sum  seed=5
+Dataset: BACE  |  1513 molecules  |  1 task(s)
+  class balance — train: 0.52 pos  val: 0.21 pos  test: 0.21 pos
+Saved scaffold split (1210/151/152) to ./data/splits/BACE_scaffold_seed5.json
+Split  train=1210  val=151  test=152
+Model: gcn  |  readout=sum  |  params=42,625
+
+Training BACE_gcn_sum_seed5 for up to 100 epochs ...
+  Epoch    1 | loss 0.8841 | val_auc 0.3812 *
+  Epoch    2 | loss 0.7034 | val_auc 0.6707 *
+  Epoch    3 | loss 0.6925 | val_auc 0.6672
+  Epoch   10 | loss 0.6913 | val_auc 0.6497
+  Epoch   20 | loss 0.6753 | val_auc 0.6411
+  Early stopping at epoch 22  (best val_auc=0.6707 at epoch 2)
+
+============================================================
+  BACE_gcn_sum_seed5
+  train_auc=0.7133  val_auc=0.6707  test_auc=0.6326  (best epoch 2)
+  Saved → results/BACE_gcn_sum_seed5_metrics.json
+============================================================

@@ -1,0 +1,25 @@
+Task 102: BBBP / gat / max / seed 1
+[run_single] device=cuda  model=gat  readout=max  seed=1
+Dataset: BBBP  |  2039 molecules  |  1 task(s)
+Loaded existing scaffold split from ./data/splits/BBBP_scaffold_seed1.json
+Split  train=1631  val=203  test=205
+Model: gat  |  readout=max  |  params=43,393
+
+Training BBBP_gat_max_seed1 for up to 100 epochs ...
+  Epoch    1 | loss 0.5800 | val_auc 0.6982 *
+  Epoch    2 | loss 0.5663 | val_auc 0.7597 *
+  Epoch    3 | loss 0.5535 | val_auc 0.8052 *
+  Epoch   10 | loss 0.5065 | val_auc 0.8565
+  Epoch   20 | loss 0.5119 | val_auc 0.8591
+  Epoch   30 | loss 0.4961 | val_auc 0.8688 *
+  Epoch   40 | loss 0.4769 | val_auc 0.8662
+  Epoch   50 | loss 0.4680 | val_auc 0.8864
+  Epoch   60 | loss 0.4594 | val_auc 0.8984
+  Epoch   70 | loss 0.4433 | val_auc 0.8996
+  Early stopping at epoch 78  (best val_auc=0.9062 at epoch 58)
+
+============================================================
+  BBBP_gat_max_seed1
+  train_auc=0.7587  val_auc=0.9062  test_auc=0.9103  (best epoch 58)
+  Saved → results/BBBP_gat_max_seed1_metrics.json
+============================================================

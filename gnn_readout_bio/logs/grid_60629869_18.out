@@ -1,0 +1,26 @@
+Task 18: BBBP / gcn / sum / seed 7
+[run_single] device=cuda  model=gcn  readout=sum  seed=7
+Dataset: BBBP  |  2039 molecules  |  1 task(s)
+Loaded existing scaffold split from ./data/splits/BBBP_scaffold_seed7.json
+Split  train=1631  val=203  test=205
+Model: gcn  |  readout=sum  |  params=42,625
+
+Training BBBP_gcn_sum_seed7 for up to 100 epochs ...
+  Epoch    1 | loss 0.6538 | val_auc 0.3708 *
+  Epoch    2 | loss 0.5926 | val_auc 0.5878 *
+  Epoch    3 | loss 0.5855 | val_auc 0.6128 *
+  Epoch   10 | loss 0.5455 | val_auc 0.8708 *
+  Epoch   20 | loss 0.5248 | val_auc 0.8125
+  Epoch   30 | loss 0.4918 | val_auc 0.8923
+  Epoch   40 | loss 0.4709 | val_auc 0.9231 *
+  Epoch   50 | loss 0.4568 | val_auc 0.8999
+  Epoch   60 | loss 0.4208 | val_auc 0.9242 *
+  Epoch   70 | loss 0.4063 | val_auc 0.9116
+  Epoch   80 | loss 0.3816 | val_auc 0.8966
+  Early stopping at epoch 82  (best val_auc=0.9291 at epoch 62)
+
+============================================================
+  BBBP_gcn_sum_seed7
+  train_auc=0.8468  val_auc=0.9291  test_auc=0.9502  (best epoch 62)
+  Saved → results/BBBP_gcn_sum_seed7_metrics.json
+============================================================

@@ -1,0 +1,18 @@
+{
+  "train_auc": 0.7947797415813082,
+  "val_auc": 0.989770867430442,
+  "test_auc": 0.8478545264259549,
+  "best_epoch": 61,
+  "run_name": "BBBP_gat_max_seed3",
+  "dataset": "BBBP",
+  "model": "gat",
+  "readout": "max",
+  "seed": 3,
+  "split": "scaffold",
+  "checkpoint": "results/BBBP_gat_max_seed3_best.pt",
+  "hidden_dim": 128,
+  "num_layers": 3,
+  "dropout": 0.3,
+  "lr": 0.001,
+  "batch_size": 64
+}

@@ -1,0 +1,18 @@
+{
+  "train_auc": 0.7277357344540023,
+  "val_auc": 0.6793010752688172,
+  "test_auc": 0.66171875,
+  "best_epoch": 21,
+  "run_name": "BACE_graphsage_attention_seed6",
+  "dataset": "BACE",
+  "model": "graphsage",
+  "readout": "attention",
+  "seed": 6,
+  "split": "scaffold",
+  "checkpoint": "results/BACE_graphsage_attention_seed6_best.pt",
+  "hidden_dim": 128,
+  "num_layers": 3,
+  "dropout": 0.3,
+  "lr": 0.001,
+  "batch_size": 32
+}

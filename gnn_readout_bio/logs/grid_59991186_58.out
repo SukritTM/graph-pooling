@@ -1,0 +1,20 @@
+Task 58: BACE / gat / mean / seed 4
+[run_single] device=cuda  model=gat  readout=mean  seed=4
+Dataset: BACE  |  1513 molecules  |  1 task(s)
+Loaded existing scaffold split from ./data/splits/BACE_scaffold_seed4.json
+Split  train=1210  val=151  test=152
+Model: gat  |  readout=mean  |  params=43,393
+
+Training BACE_gat_mean_seed4 for up to 100 epochs ...
+  Epoch    1 | loss 0.6974 | val_auc 0.5460 *
+  Epoch    2 | loss 0.6966 | val_auc 0.5336
+  Epoch    3 | loss 0.6890 | val_auc 0.5301
+  Epoch   10 | loss 0.6726 | val_auc 0.5255
+  Epoch   20 | loss 0.6588 | val_auc 0.5204
+  Early stopping at epoch 21  (best val_auc=0.5460 at epoch 1)
+
+============================================================
+  BACE_gat_mean_seed4
+  train_auc=0.6244  val_auc=0.5460  test_auc=0.5344  (best epoch 1)
+  Saved → results/BACE_gat_mean_seed4_metrics.json
+============================================================

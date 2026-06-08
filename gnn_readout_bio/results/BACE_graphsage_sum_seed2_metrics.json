@@ -1,0 +1,18 @@
+{
+  "train_auc": 0.8608945104734388,
+  "val_auc": 0.789247311827957,
+  "test_auc": 0.8195312499999999,
+  "best_epoch": 97,
+  "run_name": "BACE_graphsage_sum_seed2",
+  "dataset": "BACE",
+  "model": "graphsage",
+  "readout": "sum",
+  "seed": 2,
+  "split": "scaffold",
+  "checkpoint": "results/BACE_graphsage_sum_seed2_best.pt",
+  "hidden_dim": 128,
+  "num_layers": 3,
+  "dropout": 0.3,
+  "lr": 0.001,
+  "batch_size": 32
+}

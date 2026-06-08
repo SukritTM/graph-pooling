@@ -1,0 +1,27 @@
+Task 102: BACE / graphsage / max / seed 6
+[run_single] device=cuda  model=graphsage  readout=max  seed=6
+Dataset: BACE  |  1513 molecules  |  1 task(s)
+Loaded existing scaffold split from ./data/splits/BACE_scaffold_seed6.json
+Split  train=1210  val=151  test=152
+Model: graphsage  |  readout=max  |  params=76,545
+
+Training BACE_graphsage_max_seed6 for up to 100 epochs ...
+  Epoch    1 | loss 0.7011 | val_auc 0.5806 *
+  Epoch    2 | loss 0.6951 | val_auc 0.5946 *
+  Epoch    3 | loss 0.6890 | val_auc 0.5978 *
+  Epoch   10 | loss 0.6663 | val_auc 0.6239
+  Epoch   20 | loss 0.6423 | val_auc 0.6597 *
+  Epoch   30 | loss 0.5976 | val_auc 0.6669
+  Epoch   40 | loss 0.5710 | val_auc 0.6680
+  Epoch   50 | loss 0.5793 | val_auc 0.6978 *
+  Epoch   60 | loss 0.5321 | val_auc 0.7048
+  Epoch   70 | loss 0.5196 | val_auc 0.7073
+  Epoch   80 | loss 0.5014 | val_auc 0.7280
+  Epoch   90 | loss 0.4935 | val_auc 0.7353
+  Epoch  100 | loss 0.4874 | val_auc 0.7398
+
+============================================================
+  BACE_graphsage_max_seed6
+  train_auc=0.8849  val_auc=0.7556  test_auc=0.8206  (best epoch 99)
+  Saved → results/BACE_graphsage_max_seed6_metrics.json
+============================================================

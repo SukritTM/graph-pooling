@@ -1,0 +1,18 @@
+{
+  "train_auc": 0.7936207069692709,
+  "val_auc": 0.9189852700490999,
+  "test_auc": 0.923861852433281,
+  "best_epoch": 24,
+  "run_name": "BBBP_graphsage_attention_seed8",
+  "dataset": "BBBP",
+  "model": "graphsage",
+  "readout": "attention",
+  "seed": 8,
+  "split": "scaffold",
+  "checkpoint": "results/BBBP_graphsage_attention_seed8_best.pt",
+  "hidden_dim": 128,
+  "num_layers": 3,
+  "dropout": 0.3,
+  "lr": 0.001,
+  "batch_size": 64
+}

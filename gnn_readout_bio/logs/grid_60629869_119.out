@@ -1,0 +1,20 @@
+Task 119: BBBP / gat / attention / seed 8
+[run_single] device=cpu  model=gat  readout=attention  seed=8
+Dataset: BBBP  |  2039 molecules  |  1 task(s)
+Loaded existing scaffold split from ./data/splits/BBBP_scaffold_seed8.json
+Split  train=1631  val=203  test=205
+Model: gat  |  readout=attention  |  params=60,034
+
+Training BBBP_gat_attention_seed8 for up to 100 epochs ...
+  Epoch    1 | loss 0.5652 | val_auc 0.3914 *
+  Epoch    2 | loss 0.5501 | val_auc 0.8088 *
+  Epoch    3 | loss 0.5469 | val_auc 0.8689 *
+  Epoch   10 | loss 0.5296 | val_auc 0.8224
+  Epoch   20 | loss 0.4842 | val_auc 0.8418
+  Early stopping at epoch 24  (best val_auc=0.8760 at epoch 4)
+
+============================================================
+  BBBP_gat_attention_seed8
+  train_auc=0.6843  val_auc=0.8760  test_auc=0.8791  (best epoch 4)
+  Saved → results/BBBP_gat_attention_seed8_metrics.json
+============================================================

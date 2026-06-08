@@ -1,0 +1,18 @@
+{
+  "train_auc": 0.807540985400661,
+  "val_auc": 0.7282258064516128,
+  "test_auc": 0.7528645833333334,
+  "best_epoch": 44,
+  "run_name": "BACE_gcn_max_seed2",
+  "dataset": "BACE",
+  "model": "gcn",
+  "readout": "max",
+  "seed": 2,
+  "split": "scaffold",
+  "checkpoint": "results/BACE_gcn_max_seed2_best.pt",
+  "hidden_dim": 128,
+  "num_layers": 3,
+  "dropout": 0.3,
+  "lr": 0.001,
+  "batch_size": 32
+}

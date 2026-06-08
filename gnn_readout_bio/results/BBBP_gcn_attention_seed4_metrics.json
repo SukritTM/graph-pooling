@@ -1,0 +1,18 @@
+{
+  "train_auc": 0.6955013138515097,
+  "val_auc": 0.9281914893617023,
+  "test_auc": 0.8910256410256411,
+  "best_epoch": 3,
+  "run_name": "BBBP_gcn_attention_seed4",
+  "dataset": "BBBP",
+  "model": "gcn",
+  "readout": "attention",
+  "seed": 4,
+  "split": "scaffold",
+  "checkpoint": "results/BBBP_gcn_attention_seed4_best.pt",
+  "hidden_dim": 128,
+  "num_layers": 3,
+  "dropout": 0.3,
+  "lr": 0.001,
+  "batch_size": 64
+}

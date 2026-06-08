@@ -1,0 +1,18 @@
+{
+  "train_auc": 0.8785335544027842,
+  "val_auc": 0.860752688172043,
+  "test_auc": 0.7234375000000001,
+  "best_epoch": 97,
+  "run_name": "BACE_graphsage_max_seed7",
+  "dataset": "BACE",
+  "model": "graphsage",
+  "readout": "max",
+  "seed": 7,
+  "split": "scaffold",
+  "checkpoint": "results/BACE_graphsage_max_seed7_best.pt",
+  "hidden_dim": 128,
+  "num_layers": 3,
+  "dropout": 0.3,
+  "lr": 0.001,
+  "batch_size": 32
+}

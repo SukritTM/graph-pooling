@@ -1,0 +1,18 @@
+{
+  "train_auc": 0.6871202801767423,
+  "val_auc": 0.889798145117294,
+  "test_auc": 0.8809523809523809,
+  "best_epoch": 4,
+  "run_name": "BBBP_gat_mean_seed8",
+  "dataset": "BBBP",
+  "model": "gat",
+  "readout": "mean",
+  "seed": 8,
+  "split": "scaffold",
+  "checkpoint": "results/BBBP_gat_mean_seed8_best.pt",
+  "hidden_dim": 128,
+  "num_layers": 3,
+  "dropout": 0.3,
+  "lr": 0.001,
+  "batch_size": 64
+}

@@ -1,0 +1,18 @@
+{
+  "train_auc": 0.6990223522126264,
+  "val_auc": 0.9341243862520457,
+  "test_auc": 0.8070381998953428,
+  "best_epoch": 15,
+  "run_name": "BBBP_gcn_max_seed0",
+  "dataset": "BBBP",
+  "model": "gcn",
+  "readout": "max",
+  "seed": 0,
+  "split": "scaffold",
+  "checkpoint": "results/BBBP_gcn_max_seed0_best.pt",
+  "hidden_dim": 128,
+  "num_layers": 3,
+  "dropout": 0.3,
+  "lr": 0.001,
+  "batch_size": 64
+}

@@ -1,0 +1,18 @@
+{
+  "train_auc": 0.7033537986735834,
+  "val_auc": 0.6909946236559139,
+  "test_auc": 0.6252604166666667,
+  "best_epoch": 39,
+  "run_name": "BACE_gat_attention_seed5",
+  "dataset": "BACE",
+  "model": "gat",
+  "readout": "attention",
+  "seed": 5,
+  "split": "scaffold",
+  "checkpoint": "results/BACE_gat_attention_seed5_best.pt",
+  "hidden_dim": 128,
+  "num_layers": 3,
+  "dropout": 0.3,
+  "lr": 0.001,
+  "batch_size": 32
+}

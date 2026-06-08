@@ -1,0 +1,25 @@
+Task 137: BBBP / graphsage / sum / seed 6
+[run_single] device=cuda  model=graphsage  readout=sum  seed=6
+Dataset: BBBP  |  2039 molecules  |  1 task(s)
+Loaded existing scaffold split from ./data/splits/BBBP_scaffold_seed6.json
+Split  train=1631  val=203  test=205
+Model: graphsage  |  readout=sum  |  params=76,545
+
+Training BBBP_graphsage_sum_seed6 for up to 100 epochs ...
+  Epoch    1 | loss 0.8480 | val_auc 0.1342 *
+  Epoch    2 | loss 0.6160 | val_auc 0.1840 *
+  Epoch    3 | loss 0.6128 | val_auc 0.1650
+  Epoch   10 | loss 0.5670 | val_auc 0.8189 *
+  Epoch   20 | loss 0.5088 | val_auc 0.8178
+  Epoch   30 | loss 0.4766 | val_auc 0.8572
+  Epoch   40 | loss 0.4442 | val_auc 0.8594
+  Epoch   50 | loss 0.4018 | val_auc 0.8942
+  Epoch   60 | loss 0.4064 | val_auc 0.8916
+  Epoch   70 | loss 0.3656 | val_auc 0.9071
+  Early stopping at epoch 77  (best val_auc=0.9154 at epoch 57)
+
+============================================================
+  BBBP_graphsage_sum_seed6
+  train_auc=0.8766  val_auc=0.9154  test_auc=0.9481  (best epoch 57)
+  Saved → results/BBBP_graphsage_sum_seed6_metrics.json
+============================================================

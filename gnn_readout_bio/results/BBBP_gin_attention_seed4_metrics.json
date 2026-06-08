@@ -1,0 +1,18 @@
+{
+  "train_auc": 0.8618635770234987,
+  "val_auc": 0.9631751227495907,
+  "test_auc": 0.9432234432234432,
+  "best_epoch": 7,
+  "run_name": "BBBP_gin_attention_seed4",
+  "dataset": "BBBP",
+  "model": "gin",
+  "readout": "attention",
+  "seed": 4,
+  "split": "scaffold",
+  "checkpoint": "results/BBBP_gin_attention_seed4_best.pt",
+  "hidden_dim": 128,
+  "num_layers": 3,
+  "dropout": 0.3,
+  "lr": 0.001,
+  "batch_size": 64
+}

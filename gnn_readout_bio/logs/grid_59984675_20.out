@@ -1,0 +1,23 @@
+Task 20: BACE / gin / max / seed 1
+[run_single] device=cuda  model=gin  readout=max  seed=1
+Dataset: BACE  |  1513 molecules  |  1 task(s)
+Loaded existing scaffold split from ./data/splits/BACE_scaffold_seed1.json
+Split  train=1210  val=151  test=152
+Model: gin  |  readout=max  |  params=92,932
+
+Training BACE_gin_max_seed1 for up to 100 epochs ...
+  Epoch    1 | loss 0.6917 | val_auc 0.5825 *
+  Epoch    2 | loss 0.6678 | val_auc 0.6522 *
+  Epoch    3 | loss 0.6428 | val_auc 0.6108
+  Epoch   10 | loss 0.5655 | val_auc 0.7349 *
+  Epoch   20 | loss 0.4716 | val_auc 0.7339
+  Epoch   30 | loss 0.4564 | val_auc 0.8177 *
+  Epoch   40 | loss 0.3978 | val_auc 0.8005
+  Epoch   50 | loss 0.3760 | val_auc 0.7981
+  Early stopping at epoch 50  (best val_auc=0.8177 at epoch 30)
+
+============================================================
+  BACE_gin_max_seed1
+  train_auc=0.9139  val_auc=0.8177  test_auc=0.8099  (best epoch 30)
+  Saved → results/BACE_gin_max_seed1_metrics.json
+============================================================

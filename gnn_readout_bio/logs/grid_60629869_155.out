@@ -1,0 +1,23 @@
+Task 155: BBBP / graphsage / attention / seed 4
+[run_single] device=cuda  model=graphsage  readout=attention  seed=4
+Dataset: BBBP  |  2039 molecules  |  1 task(s)
+Loaded existing scaffold split from ./data/splits/BBBP_scaffold_seed4.json
+Split  train=1631  val=203  test=205
+Model: graphsage  |  readout=attention  |  params=93,186
+
+Training BBBP_graphsage_attention_seed4 for up to 100 epochs ...
+  Epoch    1 | loss 0.5656 | val_auc 0.5188 *
+  Epoch    2 | loss 0.5471 | val_auc 0.8977 *
+  Epoch    3 | loss 0.5424 | val_auc 0.8939
+  Epoch   10 | loss 0.5031 | val_auc 0.9078 *
+  Epoch   20 | loss 0.4743 | val_auc 0.9199
+  Epoch   30 | loss 0.4537 | val_auc 0.9244
+  Epoch   40 | loss 0.4225 | val_auc 0.9374
+  Epoch   50 | loss 0.3824 | val_auc 0.9247
+  Early stopping at epoch 59  (best val_auc=0.9453 at epoch 39)
+
+============================================================
+  BBBP_graphsage_attention_seed4
+  train_auc=0.8668  val_auc=0.9453  test_auc=0.9226  (best epoch 39)
+  Saved → results/BBBP_graphsage_attention_seed4_metrics.json
+============================================================

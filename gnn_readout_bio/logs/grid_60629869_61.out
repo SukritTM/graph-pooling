@@ -1,0 +1,20 @@
+Task 61: BBBP / gin / max / seed 0
+[run_single] device=cuda  model=gin  readout=max  seed=0
+Dataset: BBBP  |  2039 molecules  |  1 task(s)
+Loaded existing scaffold split from ./data/splits/BBBP_scaffold_seed0.json
+Split  train=1631  val=203  test=205
+Model: gin  |  readout=max  |  params=92,932
+
+Training BBBP_gin_max_seed0 for up to 100 epochs ...
+  Epoch    1 | loss 0.5677 | val_auc 0.8388 *
+  Epoch    2 | loss 0.5025 | val_auc 0.8991 *
+  Epoch    3 | loss 0.4860 | val_auc 0.9407 *
+  Epoch   10 | loss 0.3790 | val_auc 0.9566
+  Epoch   20 | loss 0.3247 | val_auc 0.9472
+  Early stopping at epoch 29  (best val_auc=0.9738 at epoch 9)
+
+============================================================
+  BBBP_gin_max_seed0
+  train_auc=0.8383  val_auc=0.9738  test_auc=0.9233  (best epoch 9)
+  Saved → results/BBBP_gin_max_seed0_metrics.json
+============================================================

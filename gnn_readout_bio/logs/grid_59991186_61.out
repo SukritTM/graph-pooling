@@ -1,0 +1,27 @@
+Task 61: BACE / gat / mean / seed 7
+[run_single] device=cuda  model=gat  readout=mean  seed=7
+Dataset: BACE  |  1513 molecules  |  1 task(s)
+Loaded existing scaffold split from ./data/splits/BACE_scaffold_seed7.json
+Split  train=1210  val=151  test=152
+Model: gat  |  readout=mean  |  params=43,393
+
+Training BACE_gat_mean_seed7 for up to 100 epochs ...
+  Epoch    1 | loss 0.7000 | val_auc 0.5815 *
+  Epoch    2 | loss 0.6941 | val_auc 0.5634
+  Epoch    3 | loss 0.6933 | val_auc 0.5680
+  Epoch   10 | loss 0.6770 | val_auc 0.5562
+  Epoch   20 | loss 0.6643 | val_auc 0.6110
+  Epoch   30 | loss 0.6399 | val_auc 0.6712
+  Epoch   40 | loss 0.6069 | val_auc 0.7454
+  Epoch   50 | loss 0.5857 | val_auc 0.6984
+  Epoch   60 | loss 0.5722 | val_auc 0.7629
+  Epoch   70 | loss 0.5527 | val_auc 0.8040 *
+  Epoch   80 | loss 0.5520 | val_auc 0.8035
+  Epoch   90 | loss 0.5308 | val_auc 0.8132 *
+  Epoch  100 | loss 0.5319 | val_auc 0.7804
+
+============================================================
+  BACE_gat_mean_seed7
+  train_auc=0.8379  val_auc=0.8132  test_auc=0.6721  (best epoch 90)
+  Saved → results/BACE_gat_mean_seed7_metrics.json
+============================================================

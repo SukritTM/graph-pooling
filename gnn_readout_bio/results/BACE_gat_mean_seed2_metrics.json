@@ -1,0 +1,18 @@
+{
+  "train_auc": 0.6278139842843697,
+  "val_auc": 0.5779569892473119,
+  "test_auc": 0.5828125,
+  "best_epoch": 5,
+  "run_name": "BACE_gat_mean_seed2",
+  "dataset": "BACE",
+  "model": "gat",
+  "readout": "mean",
+  "seed": 2,
+  "split": "scaffold",
+  "checkpoint": "results/BACE_gat_mean_seed2_best.pt",
+  "hidden_dim": 128,
+  "num_layers": 3,
+  "dropout": 0.3,
+  "lr": 0.001,
+  "batch_size": 32
+}

@@ -1,0 +1,18 @@
+{
+  "train_auc": 0.9468927156521548,
+  "val_auc": 0.8451612903225807,
+  "test_auc": 0.8171875000000001,
+  "best_epoch": 69,
+  "run_name": "BACE_gin_max_seed3",
+  "dataset": "BACE",
+  "model": "gin",
+  "readout": "max",
+  "seed": 3,
+  "split": "scaffold",
+  "checkpoint": "results/BACE_gin_max_seed3_best.pt",
+  "hidden_dim": 128,
+  "num_layers": 3,
+  "dropout": 0.3,
+  "lr": 0.001,
+  "batch_size": 32
+}

@@ -1,0 +1,18 @@
+{
+  "train_auc": 0.8173390741112673,
+  "val_auc": 0.9469448990725587,
+  "test_auc": 0.9007064364207222,
+  "best_epoch": 31,
+  "run_name": "BBBP_graphsage_max_seed4",
+  "dataset": "BBBP",
+  "model": "graphsage",
+  "readout": "max",
+  "seed": 4,
+  "split": "scaffold",
+  "checkpoint": "results/BBBP_graphsage_max_seed4_best.pt",
+  "hidden_dim": 128,
+  "num_layers": 3,
+  "dropout": 0.3,
+  "lr": 0.001,
+  "batch_size": 64
+}

@@ -1,0 +1,26 @@
+Task 34: BBBP / gcn / attention / seed 3
+[run_single] device=cuda  model=gcn  readout=attention  seed=3
+Dataset: BBBP  |  2039 molecules  |  1 task(s)
+  class balance — train: 0.77 pos  val: 0.77 pos  test: 0.76 pos
+Saved scaffold split (1631/203/205) to ./data/splits/BBBP_scaffold_seed3.json
+Split  train=1631  val=203  test=205
+Model: gcn  |  readout=attention  |  params=59,266
+
+Training BBBP_gcn_attention_seed3 for up to 100 epochs ...
+  Epoch    1 | loss 0.5611 | val_auc 0.4119 *
+  Epoch    2 | loss 0.5456 | val_auc 0.7295 *
+  Epoch    3 | loss 0.5481 | val_auc 0.8807 *
+  Epoch   10 | loss 0.5161 | val_auc 0.9644
+  Epoch   20 | loss 0.4826 | val_auc 0.9767 *
+  Epoch   30 | loss 0.4717 | val_auc 0.9761
+  Epoch   40 | loss 0.4553 | val_auc 0.9816
+  Epoch   50 | loss 0.4334 | val_auc 0.9778
+  Epoch   60 | loss 0.4481 | val_auc 0.9785
+  Epoch   70 | loss 0.4180 | val_auc 0.9651
+  Early stopping at epoch 77  (best val_auc=0.9835 at epoch 57)
+
+============================================================
+  BBBP_gcn_attention_seed3
+  train_auc=0.8236  val_auc=0.9835  test_auc=0.8592  (best epoch 57)
+  Saved → results/BBBP_gcn_attention_seed3_metrics.json
+============================================================

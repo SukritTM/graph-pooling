@@ -1,0 +1,25 @@
+Task 4: BBBP / gcn / mean / seed 3
+[run_single] device=cpu  model=gcn  readout=mean  seed=3
+Dataset: BBBP  |  2039 molecules  |  1 task(s)
+Loaded existing scaffold split from ./data/splits/BBBP_scaffold_seed3.json
+Split  train=1631  val=203  test=205
+Model: gcn  |  readout=mean  |  params=42,625
+
+Training BBBP_gcn_mean_seed3 for up to 100 epochs ...
+  Epoch    1 | loss 0.5668 | val_auc 0.4636 *
+  Epoch    2 | loss 0.5483 | val_auc 0.7291 *
+  Epoch    3 | loss 0.5443 | val_auc 0.8725 *
+  Epoch   10 | loss 0.5156 | val_auc 0.9564 *
+  Epoch   20 | loss 0.5048 | val_auc 0.9637
+  Epoch   30 | loss 0.4771 | val_auc 0.9742 *
+  Epoch   40 | loss 0.4846 | val_auc 0.9764 *
+  Epoch   50 | loss 0.4560 | val_auc 0.9696
+  Epoch   60 | loss 0.4502 | val_auc 0.9813
+  Epoch   70 | loss 0.4303 | val_auc 0.9727
+  Early stopping at epoch 71  (best val_auc=0.9817 at epoch 51)
+
+============================================================
+  BBBP_gcn_mean_seed3
+  train_auc=0.8070  val_auc=0.9817  test_auc=0.8677  (best epoch 51)
+  Saved → results/BBBP_gcn_mean_seed3_metrics.json
+============================================================

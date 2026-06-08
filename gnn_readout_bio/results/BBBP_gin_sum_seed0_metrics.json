@@ -1,0 +1,18 @@
+{
+  "train_auc": 0.8694161310838857,
+  "val_auc": 0.9769503546099291,
+  "test_auc": 0.9416535845107274,
+  "best_epoch": 9,
+  "run_name": "BBBP_gin_sum_seed0",
+  "dataset": "BBBP",
+  "model": "gin",
+  "readout": "sum",
+  "seed": 0,
+  "split": "scaffold",
+  "checkpoint": "results/BBBP_gin_sum_seed0_best.pt",
+  "hidden_dim": 128,
+  "num_layers": 3,
+  "dropout": 0.3,
+  "lr": 0.001,
+  "batch_size": 64
+}

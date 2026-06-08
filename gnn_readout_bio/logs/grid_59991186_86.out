@@ -1,0 +1,26 @@
+Task 86: BACE / graphsage / mean / seed 4
+[run_single] device=cuda  model=graphsage  readout=mean  seed=4
+Dataset: BACE  |  1513 molecules  |  1 task(s)
+Loaded existing scaffold split from ./data/splits/BACE_scaffold_seed4.json
+Split  train=1210  val=151  test=152
+Model: graphsage  |  readout=mean  |  params=76,545
+
+Training BACE_graphsage_mean_seed4 for up to 100 epochs ...
+  Epoch    1 | loss 0.6962 | val_auc 0.5376 *
+  Epoch    2 | loss 0.6941 | val_auc 0.5435 *
+  Epoch    3 | loss 0.6953 | val_auc 0.5374
+  Epoch   10 | loss 0.6746 | val_auc 0.5462
+  Epoch   20 | loss 0.6592 | val_auc 0.5556 *
+  Epoch   30 | loss 0.6569 | val_auc 0.5707
+  Epoch   40 | loss 0.5774 | val_auc 0.6852
+  Epoch   50 | loss 0.5611 | val_auc 0.7414
+  Epoch   60 | loss 0.5313 | val_auc 0.7570
+  Epoch   70 | loss 0.5133 | val_auc 0.7567
+  Epoch   80 | loss 0.4909 | val_auc 0.7629
+  Early stopping at epoch 89  (best val_auc=0.8008 at epoch 69)
+
+============================================================
+  BACE_graphsage_mean_seed4
+  train_auc=0.8542  val_auc=0.8008  test_auc=0.8547  (best epoch 69)
+  Saved → results/BACE_graphsage_mean_seed4_metrics.json
+============================================================

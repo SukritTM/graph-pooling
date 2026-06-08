@@ -1,0 +1,26 @@
+Task 100: BBBP / gat / sum / seed 9
+[run_single] device=cuda  model=gat  readout=sum  seed=9
+Dataset: BBBP  |  2039 molecules  |  1 task(s)
+Loaded existing scaffold split from ./data/splits/BBBP_scaffold_seed9.json
+Split  train=1631  val=203  test=205
+Model: gat  |  readout=sum  |  params=43,393
+
+Training BBBP_gat_sum_seed9 for up to 100 epochs ...
+  Epoch    1 | loss 0.8350 | val_auc 0.1723 *
+  Epoch    2 | loss 0.6056 | val_auc 0.2983 *
+  Epoch    3 | loss 0.5901 | val_auc 0.3426 *
+  Epoch   10 | loss 0.5676 | val_auc 0.7418
+  Epoch   20 | loss 0.5374 | val_auc 0.8101
+  Epoch   30 | loss 0.5223 | val_auc 0.8624
+  Epoch   40 | loss 0.5077 | val_auc 0.8410
+  Epoch   50 | loss 0.5002 | val_auc 0.8644
+  Epoch   60 | loss 0.4619 | val_auc 0.8486
+  Epoch   70 | loss 0.4697 | val_auc 0.9120
+  Epoch   80 | loss 0.4543 | val_auc 0.8805
+  Early stopping at epoch 87  (best val_auc=0.9229 at epoch 67)
+
+============================================================
+  BBBP_gat_sum_seed9
+  train_auc=0.7990  val_auc=0.9229  test_auc=0.9397  (best epoch 67)
+  Saved → results/BBBP_gat_sum_seed9_metrics.json
+============================================================

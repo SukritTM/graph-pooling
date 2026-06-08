@@ -1,0 +1,26 @@
+Task 128: BBBP / graphsage / mean / seed 7
+[run_single] device=cuda  model=graphsage  readout=mean  seed=7
+Dataset: BBBP  |  2039 molecules  |  1 task(s)
+Loaded existing scaffold split from ./data/splits/BBBP_scaffold_seed7.json
+Split  train=1631  val=203  test=205
+Model: graphsage  |  readout=mean  |  params=76,545
+
+Training BBBP_graphsage_mean_seed7 for up to 100 epochs ...
+  Epoch    1 | loss 0.5610 | val_auc 0.6860 *
+  Epoch    2 | loss 0.5526 | val_auc 0.8460 *
+  Epoch    3 | loss 0.5498 | val_auc 0.8415
+  Epoch   10 | loss 0.5077 | val_auc 0.8621
+  Epoch   20 | loss 0.4744 | val_auc 0.8700
+  Epoch   30 | loss 0.4609 | val_auc 0.8854
+  Epoch   40 | loss 0.4290 | val_auc 0.9120
+  Epoch   50 | loss 0.4039 | val_auc 0.9055
+  Epoch   60 | loss 0.3895 | val_auc 0.9105
+  Epoch   70 | loss 0.3793 | val_auc 0.9333
+  Epoch   80 | loss 0.3507 | val_auc 0.9228
+  Early stopping at epoch 83  (best val_auc=0.9336 at epoch 63)
+
+============================================================
+  BBBP_graphsage_mean_seed7
+  train_auc=0.8965  val_auc=0.9336  test_auc=0.9339  (best epoch 63)
+  Saved → results/BBBP_graphsage_mean_seed7_metrics.json
+============================================================
