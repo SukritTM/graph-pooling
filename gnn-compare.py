@@ -6,7 +6,7 @@ from torch_geometric.loader import DataLoader
 from torch_geometric.nn import GCNConv, global_mean_pool
 from torch_geometric.datasets import TUDataset, MoleculeNet
 
-from pooling.attn_pooling import GraphSelfAttention, global_attn_pool_sample
+from pooling.attn_pooling import GraphSelfAttention
 
 from tqdm import tqdm
 
@@ -65,8 +65,8 @@ class attnGCN(nn.Module):
 
         self.conv2 = GCNConv(128, 128)
 
-        self.attn_layer = GraphSelfAttention(128, 128)
-        self.agg = global_attn_pool_sample
+        self.readout = GraphSelfAttention(128, 128, mode='mean')
+        # self.agg = global_attn_pool_mean
 
         self.head1 = nn.Linear(128, 64)
         self.head2 = nn.Linear(64, 1)
@@ -91,7 +91,7 @@ class attnGCN(nn.Module):
 
         x = self.dropout(x)
         
-        x = self.agg(x, batch, self.attn_layer)
+        x = self.readout(x, batch)
         
         x = self.head1(x)
         x = self.act(x)

@@ -25,8 +25,11 @@ def graph_attn_op_batched(q, k, v, batch, batch_size):
     return torch.bmm(attn_maps, v)
 
 class GraphSelfAttention(torch.nn.Module):
-    def __init__(self, input_dim, inner_dim):
+    def __init__(self, input_dim, inner_dim, mode='sample'):
         super().__init__()
+
+        assert mode in ['sample', 'mean']
+        self.mode = mode
         self.input_dim = input_dim
         self.inner_dim = inner_dim
         self.q = torch.nn.Linear(input_dim, inner_dim)
@@ -39,7 +42,16 @@ class GraphSelfAttention(torch.nn.Module):
         k = self.k(x)
         v = self.v(x)
         out = graph_attn_op_batched(q, k, v, batch, batch.max() + 1)
-        return self.out_proj(out)
+        out = self.out_proj(out)
+        
+        if self.mode == 'sample':
+            return out[:, 0, :]
+        elif self.mode == 'mean':
+            is_not_zero = out.abs() > 1e-5 # hardcoded tolerance
+            is_not_padding = is_not_zero.sum(dim=-1) > 0
+            num_not_padding = is_not_padding.sum(dim=-1)
+
+            return out.sum(dim=-2) / num_not_padding.unsqueeze(-1)
 
 class GraphMultiHeadSelfAttention(torch.nn.Module):
     def __init__(self, input_dim, inner_dim, num_heads):
@@ -56,21 +68,16 @@ class GraphMultiHeadSelfAttention(torch.nn.Module):
         head_outputs = [head.forward(x, batch) for head in self.heads]
         # Concatenate along the last dimension
         out = torch.cat(head_outputs, dim=-1)
-        return self.out_proj(out)
+        out = self.out_proj(out)
 
+        if self.mode == 'sample':
+            return out[:, 0, :]
+        elif self.mode == 'mean':
+            '''
+            Tries to figure out the true shape by guessing the padding
+            '''
+            is_not_zero = out.abs() > 1e-5 # hardcoded tolerance
+            is_not_padding = is_not_zero.sum(dim=-1) > 0
+            num_not_padding = is_not_padding.sum(dim=-1)
 
-def global_attn_pool_sample(x, batch, attn_layer):
-    x = attn_layer(x, batch)
-
-    return x[:, 0, :]
-
-def global_attn_pool_mean(x, batch, attn_layer, guess_tol=1e-5):
-    '''
-    Tries to figure out the true shape by guessing the padding
-    '''
-    x = attn_layer(x, batch)
-    is_not_zero = x.abs() > guess_tol
-    is_not_padding = is_not_zero.sum(dim=-1) > 0
-    num_not_padding = is_not_padding.sum(dim=-1)
-
-    return x.sum(dim=-2) / num_not_padding.unsqueeze(-1)
+            return out.sum(dim=-2) / num_not_padding.unsqueeze(-1)
