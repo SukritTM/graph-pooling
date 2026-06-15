@@ -1,0 +1,24 @@
+Task 27: BACE / gcn / max / seed 6
+[run_single] device=cuda  model=gcn  readout=max  seed=6
+Dataset: BACE  |  1513 molecules  |  1 task(s)
+Loaded existing scaffold split from ./data/splits/BACE_scaffold_seed6.json
+Split  train=1209  val=151  test=153
+Model: gcn  |  readout=max  |  params=42,625
+
+Training BACE_gcn_max_seed6 for up to 100 epochs ...
+  Epoch    1 | loss 0.6983 | val_auc 0.4975 *
+  Epoch    2 | loss 0.6953 | val_auc 0.4998 *
+  Epoch    3 | loss 0.6901 | val_auc 0.4993
+  Epoch   10 | loss 0.6607 | val_auc 0.6879 *
+  Epoch   20 | loss 0.6246 | val_auc 0.7338 *
+  Epoch   30 | loss 0.6125 | val_auc 0.7550 *
+  Epoch   40 | loss 0.5854 | val_auc 0.7625
+  Epoch   50 | loss 0.5823 | val_auc 0.7616
+  Epoch   60 | loss 0.5626 | val_auc 0.7618
+  Early stopping at epoch 69  (best val_auc=0.7724 at epoch 49)
+
+============================================================
+  BACE_gcn_max_seed6
+  train_auc=0.8065  val_auc=0.7724  test_auc=0.7157  (best epoch 49)
+  Saved → results/BACE_gcn_max_seed6_metrics.json
+============================================================

@@ -1,8 +1,8 @@
 {
-  "train_auc": 0.6967449712171953,
-  "val_auc": 0.6559139784946237,
-  "test_auc": 0.62109375,
-  "best_epoch": 6,
+  "train_auc": 0.8420590408753006,
+  "val_auc": 0.8061152350653941,
+  "test_auc": 0.8027538726333907,
+  "best_epoch": 95,
   "run_name": "BACE_graphsage_sum_seed7",
   "dataset": "BACE",
   "model": "graphsage",

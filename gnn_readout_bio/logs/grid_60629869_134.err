@@ -1,4 +1,0 @@
-Removing conda version miniforge3-24.7.1
-Loading conda version miniforge3-24.7.1
-/work/pi_jensen_umass_edu/ikarn_umass_edu/.conda/envs/graph-pooling/lib/python3.13/site-packages/torch/__config__.py:9: UserWarning: CUDA initialization: CUDA unknown error - this may be due to an incorrectly set up environment, e.g. changing env variable CUDA_VISIBLE_DEVICES after program start. Setting the available devices to be zero. (Triggered internally at /pytorch/c10/cuda/CUDAFunctions.cpp:119.)
-  return torch._C._show_config()

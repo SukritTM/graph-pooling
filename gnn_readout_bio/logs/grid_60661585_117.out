@@ -1,0 +1,26 @@
+Task 117: BACE / gat / attention / seed 6
+[run_single] device=cuda  model=gat  readout=attention  seed=6
+Dataset: BACE  |  1513 molecules  |  1 task(s)
+Loaded existing scaffold split from ./data/splits/BACE_scaffold_seed6.json
+Split  train=1209  val=151  test=153
+Model: gat  |  readout=attention  |  params=60,034
+
+Training BACE_gat_attention_seed6 for up to 100 epochs ...
+  Epoch    1 | loss 0.6941 | val_auc 0.5995 *
+  Epoch    2 | loss 0.6883 | val_auc 0.6000 *
+  Epoch    3 | loss 0.6875 | val_auc 0.6036 *
+  Epoch   10 | loss 0.6784 | val_auc 0.6607 *
+  Epoch   20 | loss 0.6525 | val_auc 0.6863
+  Epoch   30 | loss 0.6328 | val_auc 0.7174 *
+  Epoch   40 | loss 0.6225 | val_auc 0.6850
+  Epoch   50 | loss 0.6216 | val_auc 0.7176
+  Epoch   60 | loss 0.6113 | val_auc 0.7413
+  Epoch   70 | loss 0.5983 | val_auc 0.7257
+  Epoch   80 | loss 0.6011 | val_auc 0.7149
+  Early stopping at epoch 88  (best val_auc=0.7787 at epoch 68)
+
+============================================================
+  BACE_gat_attention_seed6
+  train_auc=0.7761  val_auc=0.7787  test_auc=0.6497  (best epoch 68)
+  Saved → results/BACE_gat_attention_seed6_metrics.json
+============================================================

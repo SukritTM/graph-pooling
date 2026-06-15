@@ -1,8 +1,8 @@
 {
-  "train_auc": 0.8988374701775123,
-  "val_auc": 0.7811827956989248,
-  "test_auc": 0.83984375,
-  "best_epoch": 34,
+  "train_auc": 0.90597219464849,
+  "val_auc": 0.8534817956875221,
+  "test_auc": 0.8223752151462995,
+  "best_epoch": 35,
   "run_name": "BACE_gin_sum_seed8",
   "dataset": "BACE",
   "model": "gin",

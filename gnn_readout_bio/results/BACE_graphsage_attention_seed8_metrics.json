@@ -1,8 +1,8 @@
 {
-  "train_auc": 0.7279190469936744,
-  "val_auc": 0.5887096774193549,
-  "test_auc": 0.6440104166666667,
-  "best_epoch": 23,
+  "train_auc": 0.8192169611541262,
+  "val_auc": 0.7454931071049841,
+  "test_auc": 0.7024956970740104,
+  "best_epoch": 93,
   "run_name": "BACE_graphsage_attention_seed8",
   "dataset": "BACE",
   "model": "graphsage",

@@ -1,0 +1,22 @@
+Task 136: BACE / graphsage / sum / seed 5
+[run_single] device=cuda  model=graphsage  readout=sum  seed=5
+Dataset: BACE  |  1513 molecules  |  1 task(s)
+Loaded existing scaffold split from ./data/splits/BACE_scaffold_seed5.json
+Split  train=1209  val=151  test=153
+Model: graphsage  |  readout=sum  |  params=76,545
+
+Training BACE_graphsage_sum_seed5 for up to 100 epochs ...
+  Epoch    1 | loss 0.9740 | val_auc 0.3489 *
+  Epoch    2 | loss 0.6994 | val_auc 0.5125 *
+  Epoch    3 | loss 0.6927 | val_auc 0.3408
+  Epoch   10 | loss 0.6887 | val_auc 0.6398
+  Epoch   20 | loss 0.6845 | val_auc 0.6402
+  Epoch   30 | loss 0.6795 | val_auc 0.6106
+  Epoch   40 | loss 0.6760 | val_auc 0.5613
+  Early stopping at epoch 44  (best val_auc=0.6819 at epoch 24)
+
+============================================================
+  BACE_graphsage_sum_seed5
+  train_auc=0.7186  val_auc=0.6819  test_auc=0.6773  (best epoch 24)
+  Saved → results/BACE_graphsage_sum_seed5_metrics.json
+============================================================

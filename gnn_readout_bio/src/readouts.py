@@ -6,8 +6,8 @@ from torch_geometric.nn import global_mean_pool, global_add_pool, global_max_poo
 from torch_geometric.utils import softmax as pyg_softmax
 
 
-class AttentionReadout(nn.Module):
-    """Learnable global attention readout.
+class GatedAttentionReadout(nn.Module):
+    """Learnable graph-level gated attention readout.
 
     A two-layer gate network maps node embeddings -> scalar logits.
     Softmax is applied within each graph (using PyG's scatter softmax),
@@ -54,7 +54,7 @@ def get_readout(readout_type: str, hidden_dim: int = None):
     """Return a readout callable or nn.Module.
 
     For mean/sum/max: returns a function (x, batch) -> graph_emb.
-    For attention:   returns an AttentionReadout module.
+    For attention:    returns a GatedAttentionReadout module.
 
     The returned object is always called as readout(x, batch).
     """
@@ -67,7 +67,7 @@ def get_readout(readout_type: str, hidden_dim: int = None):
     elif readout_type == 'attention':
         if hidden_dim is None:
             raise ValueError("hidden_dim is required for attention readout")
-        return AttentionReadout(hidden_dim)
+        return GatedAttentionReadout(hidden_dim)
     else:
         raise ValueError(
             f"Unknown readout '{readout_type}'. "

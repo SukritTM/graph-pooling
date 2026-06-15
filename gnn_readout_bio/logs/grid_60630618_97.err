@@ -1,0 +1,11 @@
+Loading conda version miniforge3-24.7.1
+Traceback (most recent call last):
+  File "/work/pi_annagreen_umass_edu/Isha/graph-pooling/gnn_readout_bio/scripts/run_single.py", line 122, in <module>
+    main()
+    ~~~~^^
+  File "/work/pi_annagreen_umass_edu/Isha/graph-pooling/gnn_readout_bio/scripts/run_single.py", line 43, in main
+    cfg = load_config(args.config)
+  File "/work/pi_annagreen_umass_edu/Isha/graph-pooling/gnn_readout_bio/src/utils.py", line 26, in load_config
+    with open(path) as f:
+         ~~~~^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'configs/clintox.yaml'

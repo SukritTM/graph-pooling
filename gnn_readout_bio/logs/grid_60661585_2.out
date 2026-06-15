@@ -1,0 +1,21 @@
+Task 2: BACE / gcn / mean / seed 1
+[run_single] device=cuda  model=gcn  readout=mean  seed=1
+Dataset: BACE  |  1513 molecules  |  1 task(s)
+  class balance — train: 0.46 pos  val: 0.46 pos  test: 0.46 pos
+Saved scaffold split (1209/151/153) to ./data/splits/BACE_scaffold_seed1.json
+Split  train=1209  val=151  test=153
+Model: gcn  |  readout=mean  |  params=42,625
+
+Training BACE_gcn_mean_seed1 for up to 100 epochs ...
+  Epoch    1 | loss 0.6938 | val_auc 0.5356 *
+  Epoch    2 | loss 0.6903 | val_auc 0.5101
+  Epoch    3 | loss 0.6897 | val_auc 0.5283
+  Epoch   10 | loss 0.6883 | val_auc 0.5065
+  Epoch   20 | loss 0.6508 | val_auc 0.5184
+  Early stopping at epoch 29  (best val_auc=0.5497 at epoch 9)
+
+============================================================
+  BACE_gcn_mean_seed1
+  train_auc=0.6263  val_auc=0.5497  test_auc=0.5473  (best epoch 9)
+  Saved → results/BACE_gcn_mean_seed1_metrics.json
+============================================================

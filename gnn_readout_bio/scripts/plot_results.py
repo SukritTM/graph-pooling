@@ -20,6 +20,7 @@ import matplotlib.patches as mpatches
 MODEL_ORDER   = ['gcn', 'gin', 'gat', 'graphsage']
 READOUT_ORDER = ['mean', 'sum', 'max', 'attention']
 MODEL_LABELS  = {'gcn': 'GCN', 'gin': 'GIN', 'gat': 'GAT', 'graphsage': 'GraphSAGE'}
+READOUT_LABELS = {'mean': 'Mean', 'sum': 'Sum', 'max': 'Max', 'attention': 'Gated Attention'}
 READOUT_COLORS = {
     'mean':      '#4C72B0',
     'sum':       '#55A868',
@@ -56,7 +57,7 @@ def plot_heatmap(ax, df, metric='test_auc', title=None):
 
     ax.set_xticks(range(len(READOUT_ORDER)))
     ax.set_yticks(range(len(MODEL_ORDER)))
-    ax.set_xticklabels([r.capitalize() for r in READOUT_ORDER], fontsize=11)
+    ax.set_xticklabels([READOUT_LABELS[r] for r in READOUT_ORDER], fontsize=11)
     ax.set_yticklabels([MODEL_LABELS[m] for m in MODEL_ORDER], fontsize=11)
     ax.set_xlabel('Readout', fontsize=12)
     ax.set_ylabel('Model', fontsize=12)
@@ -88,7 +89,7 @@ def plot_bars(ax, df, metric='test_auc', title=None):
         bars = ax.bar(
             x, sub['mean'], width=width,
             color=READOUT_COLORS[readout],
-            label=readout.capitalize(),
+            label=READOUT_LABELS[readout],
             alpha=0.88,
         )
         ax.errorbar(
@@ -101,6 +102,39 @@ def plot_bars(ax, df, metric='test_auc', title=None):
     ax.set_ylabel('ROC-AUC', fontsize=12)
     ax.set_title(title or f'Mean ± Std {metric.replace("_", " ").title()}', fontsize=13, fontweight='bold')
     ax.legend(title='Readout', fontsize=10, title_fontsize=10, loc='lower right')
+    ax.set_ylim(0.45, 1.02)
+    ax.yaxis.grid(True, linestyle='--', alpha=0.6)
+    ax.set_axisbelow(True)
+
+
+def plot_bars_by_readout(ax, df, metric='test_auc', title=None):
+    """Grouped bar chart: readouts on x-axis, bars per model, with std error bars."""
+    agg = df.groupby(['model', 'readout'])[metric].agg(['mean', 'std']).reset_index()
+
+    n_models  = len(MODEL_ORDER)
+    n_readouts = len(READOUT_ORDER)
+    width = 0.18
+    offsets = np.linspace(-(n_models - 1) / 2, (n_models - 1) / 2, n_models) * width
+
+    for j, model in enumerate(MODEL_ORDER):
+        sub = agg[agg['model'] == model].set_index('readout').reindex(READOUT_ORDER)
+        x = np.arange(n_readouts) + offsets[j]
+        bars = ax.bar(
+            x, sub['mean'], width=width,
+            color=f'C{j}',
+            label=MODEL_LABELS[model],
+            alpha=0.88,
+        )
+        ax.errorbar(
+            x, sub['mean'], yerr=sub['std'],
+            fmt='none', color='#333333', capsize=3, linewidth=1.2,
+        )
+
+    ax.set_xticks(np.arange(n_readouts))
+    ax.set_xticklabels([READOUT_LABELS[r] for r in READOUT_ORDER], fontsize=11)
+    ax.set_ylabel('ROC-AUC', fontsize=12)
+    ax.set_title(title or f'Mean ± Std {metric.replace("_", " ").title()}', fontsize=13, fontweight='bold')
+    ax.legend(title='Model', fontsize=10, title_fontsize=10, loc='lower right')
     ax.set_ylim(0.45, 1.02)
     ax.yaxis.grid(True, linestyle='--', alpha=0.6)
     ax.set_axisbelow(True)
@@ -144,7 +178,7 @@ def plot_gap_heatmap(ax, df, title=None):
     im = ax.imshow(pivot.values, cmap='OrRd', vmin=0, vmax=vmax, aspect='auto')
     ax.set_xticks(range(len(READOUT_ORDER)))
     ax.set_yticks(range(len(MODEL_ORDER)))
-    ax.set_xticklabels([r.capitalize() for r in READOUT_ORDER], fontsize=11)
+    ax.set_xticklabels([READOUT_LABELS[r] for r in READOUT_ORDER], fontsize=11)
     ax.set_yticklabels([MODEL_LABELS[m] for m in MODEL_ORDER], fontsize=11)
     ax.set_title(title or 'Generalisation Gap: Train − Test AUC', fontsize=13, fontweight='bold')
     for i, m in enumerate(MODEL_ORDER):
@@ -163,13 +197,12 @@ def make_dashboard(dataset: str, results_dir: str, out_dir: str):
         print(f"No rows found for {dataset} in {results_dir}/grid_results.csv")
         return
 
-    fig, axes = plt.subplots(2, 2, figsize=(16, 12))
-    fig.suptitle(f'{dataset} — GNN Architecture × Readout Comparison', fontsize=15, fontweight='bold', y=1.01)
+    fig, axes = plt.subplots(3, 1, figsize=(12, 14))
+    fig.suptitle(f'{dataset} — GNN Architecture × Readout Comparison', fontsize=15, fontweight='bold', y=0.995)
 
-    plot_heatmap(    axes[0, 0], df, metric='test_auc', title='Test ROC-AUC (mean over seeds)')
-    plot_gap_heatmap(axes[0, 1], df,                    title='Generalisation Gap: Train − Test AUC')
-    plot_bars(       axes[1, 0], df, metric='test_auc', title='Test ROC-AUC ± Std')
-    plot_gap(        axes[1, 1], df,                    title='Generalisation Gap (Train − Test)')
+    plot_heatmap(axes[0], df, metric='test_auc', title='Test ROC-AUC (mean over seeds)')
+    plot_bars(axes[1], df, metric='test_auc', title='Test ROC-AUC ± Std (grouped by Model)')
+    plot_bars_by_readout(axes[2], df, metric='test_auc', title='Test ROC-AUC ± Std (grouped by Readout)')
 
     plt.tight_layout()
     os.makedirs(out_dir, exist_ok=True)

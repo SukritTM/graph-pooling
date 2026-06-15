@@ -1,0 +1,27 @@
+Task 36: BACE / gcn / attention / seed 5
+[run_single] device=cuda  model=gcn  readout=attention  seed=5
+Dataset: BACE  |  1513 molecules  |  1 task(s)
+Loaded existing scaffold split from ./data/splits/BACE_scaffold_seed5.json
+Split  train=1209  val=151  test=153
+Model: gcn  |  readout=attention  |  params=59,266
+
+Training BACE_gcn_attention_seed5 for up to 100 epochs ...
+  Epoch    1 | loss 0.6935 | val_auc 0.5267 *
+  Epoch    2 | loss 0.6900 | val_auc 0.5244
+  Epoch    3 | loss 0.6912 | val_auc 0.5184
+  Epoch   10 | loss 0.6814 | val_auc 0.5290
+  Epoch   20 | loss 0.6566 | val_auc 0.5896
+  Epoch   30 | loss 0.6399 | val_auc 0.6458 *
+  Epoch   40 | loss 0.6290 | val_auc 0.6220
+  Epoch   50 | loss 0.6255 | val_auc 0.6561 *
+  Epoch   60 | loss 0.6116 | val_auc 0.6594
+  Epoch   70 | loss 0.6187 | val_auc 0.6615
+  Epoch   80 | loss 0.6046 | val_auc 0.6999 *
+  Epoch   90 | loss 0.5987 | val_auc 0.6805
+  Epoch  100 | loss 0.6003 | val_auc 0.7110
+
+============================================================
+  BACE_gcn_attention_seed5
+  train_auc=0.7664  val_auc=0.7236  test_auc=0.7031  (best epoch 96)
+  Saved → results/BACE_gcn_attention_seed5_metrics.json
+============================================================

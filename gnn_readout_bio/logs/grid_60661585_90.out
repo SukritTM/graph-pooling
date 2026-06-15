@@ -1,0 +1,27 @@
+Task 90: BACE / gat / mean / seed 9
+[run_single] device=cuda  model=gat  readout=mean  seed=9
+Dataset: BACE  |  1513 molecules  |  1 task(s)
+Loaded existing scaffold split from ./data/splits/BACE_scaffold_seed9.json
+Split  train=1209  val=151  test=153
+Model: gat  |  readout=mean  |  params=43,393
+
+Training BACE_gat_mean_seed9 for up to 100 epochs ...
+  Epoch    1 | loss 0.6968 | val_auc 0.5490 *
+  Epoch    2 | loss 0.6885 | val_auc 0.5456
+  Epoch    3 | loss 0.6905 | val_auc 0.5514 *
+  Epoch   10 | loss 0.6694 | val_auc 0.5341
+  Epoch   20 | loss 0.6363 | val_auc 0.6156 *
+  Epoch   30 | loss 0.5988 | val_auc 0.6948 *
+  Epoch   40 | loss 0.5919 | val_auc 0.7181 *
+  Epoch   50 | loss 0.5573 | val_auc 0.7188
+  Epoch   60 | loss 0.5445 | val_auc 0.7485
+  Epoch   70 | loss 0.5446 | val_auc 0.7697
+  Epoch   80 | loss 0.5263 | val_auc 0.7621
+  Epoch   90 | loss 0.5118 | val_auc 0.7950
+  Epoch  100 | loss 0.5123 | val_auc 0.7957
+
+============================================================
+  BACE_gat_mean_seed9
+  train_auc=0.8616  val_auc=0.8192  test_auc=0.7764  (best epoch 92)
+  Saved → results/BACE_gat_mean_seed9_metrics.json
+============================================================

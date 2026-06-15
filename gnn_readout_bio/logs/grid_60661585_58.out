@@ -1,0 +1,21 @@
+Task 58: BACE / gin / sum / seed 7
+[run_single] device=cuda  model=gin  readout=sum  seed=7
+Dataset: BACE  |  1513 molecules  |  1 task(s)
+Loaded existing scaffold split from ./data/splits/BACE_scaffold_seed7.json
+Split  train=1209  val=151  test=153
+Model: gin  |  readout=sum  |  params=92,932
+
+Training BACE_gin_sum_seed7 for up to 100 epochs ...
+  Epoch    1 | loss 0.7681 | val_auc 0.5156 *
+  Epoch    2 | loss 0.6569 | val_auc 0.6133 *
+  Epoch    3 | loss 0.6273 | val_auc 0.6140 *
+  Epoch   10 | loss 0.5453 | val_auc 0.6338
+  Epoch   20 | loss 0.4764 | val_auc 0.7144
+  Epoch   30 | loss 0.4448 | val_auc 0.7474
+  Early stopping at epoch 35  (best val_auc=0.7768 at epoch 15)
+
+============================================================
+  BACE_gin_sum_seed7
+  train_auc=0.8678  val_auc=0.7768  test_auc=0.8148  (best epoch 15)
+  Saved → results/BACE_gin_sum_seed7_metrics.json
+============================================================

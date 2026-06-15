@@ -1,0 +1,20 @@
+Task 122: BACE / graphsage / mean / seed 1
+[run_single] device=cpu  model=graphsage  readout=mean  seed=1
+Dataset: BACE  |  1513 molecules  |  1 task(s)
+Loaded existing scaffold split from ./data/splits/BACE_scaffold_seed1.json
+Split  train=1209  val=151  test=153
+Model: graphsage  |  readout=mean  |  params=76,545
+
+Training BACE_graphsage_mean_seed1 for up to 100 epochs ...
+  Epoch    1 | loss 0.6958 | val_auc 0.4829 *
+  Epoch    2 | loss 0.6897 | val_auc 0.5290 *
+  Epoch    3 | loss 0.6904 | val_auc 0.5755 *
+  Epoch   10 | loss 0.6687 | val_auc 0.5316
+  Epoch   20 | loss 0.6377 | val_auc 0.5541
+  Early stopping at epoch 23  (best val_auc=0.5755 at epoch 3)
+
+============================================================
+  BACE_graphsage_mean_seed1
+  train_auc=0.5409  val_auc=0.5755  test_auc=0.5849  (best epoch 3)
+  Saved → results/BACE_graphsage_mean_seed1_metrics.json
+============================================================

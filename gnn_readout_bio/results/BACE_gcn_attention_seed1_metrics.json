@@ -1,8 +1,8 @@
 {
-  "train_auc": 0.7493980782279422,
-  "val_auc": 0.737231182795699,
-  "test_auc": 0.642578125,
-  "best_epoch": 98,
+  "train_auc": 0.7392421083978559,
+  "val_auc": 0.7697066101095794,
+  "test_auc": 0.6955249569707401,
+  "best_epoch": 65,
   "run_name": "BACE_gcn_attention_seed1",
   "dataset": "BACE",
   "model": "gcn",

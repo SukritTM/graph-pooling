@@ -1,0 +1,24 @@
+Task 107: BACE / gat / max / seed 6
+[run_single] device=cuda  model=gat  readout=max  seed=6
+Dataset: BACE  |  1513 molecules  |  1 task(s)
+Loaded existing scaffold split from ./data/splits/BACE_scaffold_seed6.json
+Split  train=1209  val=151  test=153
+Model: gat  |  readout=max  |  params=43,393
+
+Training BACE_gat_max_seed6 for up to 100 epochs ...
+  Epoch    1 | loss 0.7105 | val_auc 0.5488 *
+  Epoch    2 | loss 0.6896 | val_auc 0.5594 *
+  Epoch    3 | loss 0.6932 | val_auc 0.5490
+  Epoch   10 | loss 0.6805 | val_auc 0.6644 *
+  Epoch   20 | loss 0.6592 | val_auc 0.6787
+  Epoch   30 | loss 0.6306 | val_auc 0.7233
+  Epoch   40 | loss 0.6191 | val_auc 0.7490
+  Epoch   50 | loss 0.5858 | val_auc 0.7315
+  Epoch   60 | loss 0.5835 | val_auc 0.7245
+  Early stopping at epoch 64  (best val_auc=0.7686 at epoch 44)
+
+============================================================
+  BACE_gat_max_seed6
+  train_auc=0.7868  val_auc=0.7686  test_auc=0.6294  (best epoch 44)
+  Saved → results/BACE_gat_max_seed6_metrics.json
+============================================================

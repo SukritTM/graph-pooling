@@ -1,8 +1,8 @@
 {
-  "train_auc": 0.7825844879287325,
-  "val_auc": 0.6639784946236559,
-  "test_auc": 0.7674479166666667,
-  "best_epoch": 44,
+  "train_auc": 0.7988620320737653,
+  "val_auc": 0.7469070342877342,
+  "test_auc": 0.7383820998278829,
+  "best_epoch": 41,
   "run_name": "BACE_gcn_max_seed8",
   "dataset": "BACE",
   "model": "gcn",

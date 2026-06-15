@@ -1,0 +1,27 @@
+Task 160: BACE / graphsage / attention / seed 9
+[run_single] device=cuda  model=graphsage  readout=attention  seed=9
+Dataset: BACE  |  1513 molecules  |  1 task(s)
+Loaded existing scaffold split from ./data/splits/BACE_scaffold_seed9.json
+Split  train=1209  val=151  test=153
+Model: graphsage  |  readout=attention  |  params=93,186
+
+Training BACE_graphsage_attention_seed9 for up to 100 epochs ...
+  Epoch    1 | loss 0.6933 | val_auc 0.5631 *
+  Epoch    2 | loss 0.6943 | val_auc 0.5726 *
+  Epoch    3 | loss 0.6832 | val_auc 0.5610
+  Epoch   10 | loss 0.6781 | val_auc 0.5665
+  Epoch   20 | loss 0.6513 | val_auc 0.6030
+  Epoch   30 | loss 0.6053 | val_auc 0.6622
+  Epoch   40 | loss 0.5987 | val_auc 0.6628
+  Epoch   50 | loss 0.5836 | val_auc 0.7031 *
+  Epoch   60 | loss 0.5808 | val_auc 0.7066
+  Epoch   70 | loss 0.5526 | val_auc 0.7153
+  Epoch   80 | loss 0.5516 | val_auc 0.6995
+  Epoch   90 | loss 0.5497 | val_auc 0.7398
+  Epoch  100 | loss 0.5403 | val_auc 0.7390
+
+============================================================
+  BACE_graphsage_attention_seed9
+  train_auc=0.8004  val_auc=0.7538  test_auc=0.7401  (best epoch 89)
+  Saved → results/BACE_graphsage_attention_seed9_metrics.json
+============================================================

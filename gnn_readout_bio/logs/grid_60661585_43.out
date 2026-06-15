@@ -1,0 +1,27 @@
+Task 43: BACE / gin / mean / seed 2
+[run_single] device=cuda  model=gin  readout=mean  seed=2
+Dataset: BACE  |  1513 molecules  |  1 task(s)
+Loaded existing scaffold split from ./data/splits/BACE_scaffold_seed2.json
+Split  train=1209  val=151  test=153
+Model: gin  |  readout=mean  |  params=92,932
+
+Training BACE_gin_mean_seed2 for up to 100 epochs ...
+  Epoch    1 | loss 0.6743 | val_auc 0.6248 *
+  Epoch    2 | loss 0.6284 | val_auc 0.5887
+  Epoch    3 | loss 0.6073 | val_auc 0.6297 *
+  Epoch   10 | loss 0.5224 | val_auc 0.7694
+  Epoch   20 | loss 0.4614 | val_auc 0.7534
+  Epoch   30 | loss 0.4429 | val_auc 0.7722
+  Epoch   40 | loss 0.4147 | val_auc 0.8116
+  Epoch   50 | loss 0.3912 | val_auc 0.8256
+  Epoch   60 | loss 0.3872 | val_auc 0.8155
+  Epoch   70 | loss 0.3764 | val_auc 0.8445
+  Epoch   80 | loss 0.3533 | val_auc 0.8673
+  Epoch   90 | loss 0.3449 | val_auc 0.8321
+  Early stopping at epoch 95  (best val_auc=0.8717 at epoch 75)
+
+============================================================
+  BACE_gin_mean_seed2
+  train_auc=0.9442  val_auc=0.8717  test_auc=0.9038  (best epoch 75)
+  Saved → results/BACE_gin_mean_seed2_metrics.json
+============================================================

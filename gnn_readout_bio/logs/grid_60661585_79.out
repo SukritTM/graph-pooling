@@ -1,0 +1,26 @@
+Task 79: BACE / gin / attention / seed 8
+[run_single] device=cuda  model=gin  readout=attention  seed=8
+Dataset: BACE  |  1513 molecules  |  1 task(s)
+Loaded existing scaffold split from ./data/splits/BACE_scaffold_seed8.json
+Split  train=1209  val=151  test=153
+Model: gin  |  readout=attention  |  params=109,573
+
+Training BACE_gin_attention_seed8 for up to 100 epochs ...
+  Epoch    1 | loss 0.6775 | val_auc 0.5649 *
+  Epoch    2 | loss 0.6241 | val_auc 0.5809 *
+  Epoch    3 | loss 0.6171 | val_auc 0.6912 *
+  Epoch   10 | loss 0.5172 | val_auc 0.7489 *
+  Epoch   20 | loss 0.4616 | val_auc 0.7946 *
+  Epoch   30 | loss 0.4432 | val_auc 0.8065 *
+  Epoch   40 | loss 0.4139 | val_auc 0.7978
+  Epoch   50 | loss 0.3918 | val_auc 0.8211
+  Epoch   60 | loss 0.3806 | val_auc 0.8459
+  Epoch   70 | loss 0.3652 | val_auc 0.8298
+  Epoch   80 | loss 0.3448 | val_auc 0.7925
+  Early stopping at epoch 89  (best val_auc=0.8653 at epoch 69)
+
+============================================================
+  BACE_gin_attention_seed8
+  train_auc=0.9272  val_auc=0.8653  test_auc=0.8458  (best epoch 69)
+  Saved → results/BACE_gin_attention_seed8_metrics.json
+============================================================

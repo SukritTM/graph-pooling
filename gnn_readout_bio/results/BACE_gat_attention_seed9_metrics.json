@@ -1,8 +1,8 @@
 {
-  "train_auc": 0.6234719395013898,
-  "val_auc": 0.5591397849462365,
-  "test_auc": 0.46640625,
-  "best_epoch": 4,
+  "train_auc": 0.8220542981933691,
+  "val_auc": 0.7419582891481088,
+  "test_auc": 0.6838209982788297,
+  "best_epoch": 86,
   "run_name": "BACE_gat_attention_seed9",
   "dataset": "BACE",
   "model": "gat",
